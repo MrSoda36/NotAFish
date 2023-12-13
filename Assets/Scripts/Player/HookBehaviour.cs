@@ -14,11 +14,14 @@ public class HookBehaviour : MonoBehaviour
     }
 
     void Update() {
-        if(Input.GetKeyDown(KeyCode.LeftArrow)) {
+        if(Input.GetKey(KeyCode.LeftArrow)) {
             transform.position += Vector3.left * speed * Time.deltaTime;
         }
-        if(Input.GetKeyDown(KeyCode.RightArrow)) {
+        if(Input.GetKey(KeyCode.RightArrow)) {
             transform.position += Vector3.right * speed * Time.deltaTime;
+        }
+        if(Input.GetKey(KeyCode.UpArrow)) {
+            transform.position += Vector3.up * speed * Time.deltaTime;
         }
 
     }
