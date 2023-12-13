@@ -11,8 +11,5 @@ public class FishBehaviour : MonoBehaviour
     [SerializeField] int value;
     [SerializeField] int rarity;
 
-    IEnumerator LifeTime() {
-        yield return new WaitForSeconds(Random.Range(1, 10));
-        Destroy(gameObject);
-    }
+    
 }

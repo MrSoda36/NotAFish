@@ -34,6 +34,10 @@ public class HookBehaviour : MonoBehaviour
             Destroy(collision.gameObject);
             GoBackAtTop();
         }
+        if(collision.gameObject.tag == "Ground") {
+            Debug.Log("Ground hit");
+            GoBackAtTop();
+        }
     }
 
     void GoBackAtTop() {
