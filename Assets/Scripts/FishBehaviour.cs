@@ -11,5 +11,36 @@ public class FishBehaviour : MonoBehaviour
     [SerializeField] int value;
     [SerializeField] int rarity;
 
-    
+    uint direction = 0;
+
+    void Start() {
+        StartCoroutine(Swim());
+    }
+
+    void Update() {
+        if(direction == 0) {
+            transform.position += Vector3.left * speed * Time.deltaTime;
+        }
+        else {
+            transform.position += Vector3.right * speed * Time.deltaTime;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.gameObject.tag == "Wall") {
+            if(direction == 0) {
+                direction = 1;
+            }
+            else {
+                direction = 0;
+            }
+        }
+    }
+
+    IEnumerator Swim() {
+        while(true) {
+            transform.position += Vector3.down * speed * Time.deltaTime;
+            yield return null;
+        }
+    }
 }
