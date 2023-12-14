@@ -11,10 +11,10 @@ public class FishCaught : MonoBehaviour
     public TextMeshProUGUI FishName;
     public TextMeshProUGUI FishDescription;
     
-    public void PrintFishCaught()
+    public void PrintFishCaught(FishScriptableObjects fishScriptableObjects)
     {
-        FishSprite.GetComponent<Image>().sprite = null;
-        FishName.text = "blabla";
-        FishDescription.text = "Description";
+        FishSprite.GetComponent<Image>().sprite = fishScriptableObjects.itemSprite;
+        FishName.text = fishScriptableObjects.itemName;
+        FishDescription.text = fishScriptableObjects.itemDescription;
     }
 }
