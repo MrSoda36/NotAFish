@@ -24,6 +24,7 @@ public class FishingGameManager : MonoBehaviour
     public GameObject fishingGameCanvas;
 
     public HookBehaviour hookBehaviour;
+    public FishCaught fishCaught;
 
 
     // Démarrer le jeu
@@ -32,7 +33,6 @@ public class FishingGameManager : MonoBehaviour
         // Méthode pour faire apparaître le poisson caché
         // Méthode pour faire apparître les obstacles
         hookBehaviour.GoBackAtTop();
-        // Méthode pour définir l'objet a attraper
 
         fishingGameCanvas.SetActive(true);
     }
@@ -43,6 +43,7 @@ public class FishingGameManager : MonoBehaviour
 
         fishingGameCanvas.SetActive(false);
         // faut savoir dans quel point d'eau le joueur se situe
+        fishCaught.PrintFishCaught(FishingObjectsList.Instance.oceanObjects[0]);
 
     }
 }
