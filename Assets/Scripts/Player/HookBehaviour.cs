@@ -9,8 +9,13 @@ public class HookBehaviour : MonoBehaviour
     [SerializeField] float depth;
     [SerializeField] FishBehaviour fish;
 
+    private void Start() {
+        GoBackAtTop();
+        this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+    }
 
     void Update() {
+        this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
         if(Input.GetKey(KeyCode.LeftArrow)) {
             transform.position += Vector3.left * speed * Time.deltaTime;
         }
@@ -31,7 +36,7 @@ public class HookBehaviour : MonoBehaviour
             GoBackAtTop();
         }
         if(collision.gameObject.tag == "Ground") {
-            Debug.Log("Ground hit");
+            //Debug.Log("Ground hit");
             GoBackAtTop();
         }
     }
