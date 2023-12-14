@@ -17,15 +17,6 @@ public class FishBehaviour : MonoBehaviour
         StartCoroutine(Swim());
     }
 
-    void Update() {
-        if(direction == 0) {
-            transform.position += Vector3.left * speed * Time.deltaTime;
-        }
-        else {
-            transform.position += Vector3.right * speed * Time.deltaTime;
-        }
-    }
-
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.tag == "Wall") {
             if(direction == 0) {
@@ -39,8 +30,12 @@ public class FishBehaviour : MonoBehaviour
 
     IEnumerator Swim() {
         while(true) {
-            transform.position += Vector3.down * speed * Time.deltaTime;
-            yield return null;
+            if (direction == 0) {
+                transform.position += Vector3.left * speed * Time.deltaTime;
+            }
+            else {
+                transform.position += Vector3.right * speed * Time.deltaTime;
+            }
         }
     }
 }
