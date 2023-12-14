@@ -8,13 +8,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed;
     bool hasFish;
     [SerializeField] FishBehaviour fish;
+    [SerializeField] GameObject minigame;
+    [SerializeField] bool canFish;
 
-    [SerializeField] GameObject minigame; //
-
-    private void Start()                  //
-    {                                     // 
-        minigame.SetActive(false);        //
-    }                                     //
+    private void Start()                  
+    {                                      
+        minigame.SetActive(false);        
+    }                                     
 
     void Update()
     {
@@ -57,8 +57,18 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator TimeToCatch() {
         yield return new WaitForSeconds(1);
-        Debug.Log("test");//
-        minigame.SetActive(true); //
+        Debug.Log("test");
+        minigame.SetActive(true); 
         hasFish = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        canFish = true;
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        canFish = false;
     }
 }
