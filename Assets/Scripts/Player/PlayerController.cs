@@ -8,12 +8,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed;
     bool hasFish;
     [SerializeField] FishBehaviour fish;
-
-    [SerializeField] GameObject minigame; 
+    [SerializeField] GameObject minigame;
+    [SerializeField] bool canFish;
 
     private void Start()                  
-    {                                     
-        minigame.SetActive(false);       
+    {                                      
+        minigame.SetActive(false);        
     }                                     
 
     void Update()
@@ -31,19 +31,8 @@ public class PlayerController : MonoBehaviour
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) /* && check si on est devant un point d'eau */ ) {
-            if(!hasFish) {
-                StartCoroutine(LaunchFishingRod());
-                // lancer une animation de pêche
-            }
-            else {
-                // lancer le jeu de pêche
-                minigame.SetActive(true); 
-                hasFish = false;
-            }
-
-           
-
+        if(Input.GetKeyDown(KeyCode.Space) && !hasFish) {
+            StartCoroutine(LaunchFishingRod());
         }
 
         /*if (hasFish)
@@ -56,7 +45,7 @@ public class PlayerController : MonoBehaviour
         }*/
     }
 
-    IEnumerator LaunchFishingRod() { // Remplacer ça par l'animation
+    IEnumerator LaunchFishingRod() {
         Debug.Log("Fishing rod launched");
         yield return new WaitForSeconds(Random.Range(1,3));
         hasFish = true;
@@ -66,15 +55,20 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    IEnumerator TimeToCatch() { // Si le joueur ne réagit pas assez vite, le poisson commence à s'enfuir
-        if (minigame.activeSelf) {
-            StopCoroutine(TimeToCatch());
-        }
-        else {
-            yield return new WaitForSeconds(5);
-            Debug.Log("Le poisson s'est enfui");
-        }
+    IEnumerator TimeToCatch() {
+        yield return new WaitForSeconds(1);
+        Debug.Log("test");
+        minigame.SetActive(true); 
+        hasFish = false;
+    }
 
-        
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        canFish = true;
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        canFish = false;
     }
 }
