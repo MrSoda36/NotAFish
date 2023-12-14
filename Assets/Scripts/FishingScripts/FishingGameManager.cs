@@ -25,6 +25,7 @@ public class FishingGameManager : MonoBehaviour
 
     public HookBehaviour hookBehaviour;
 
+
     // Démarrer le jeu
     public void LaunchFishingGame() {
 
@@ -41,5 +42,7 @@ public class FishingGameManager : MonoBehaviour
 
 
         fishingGameCanvas.SetActive(false);
+        // faut savoir dans quel point d'eau le joueur se situe
+
     }
 }
