@@ -830,7 +830,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a0fc9ed14a04d488cf7a76816a5a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oceanObjects: []
+  oceanObjects:
+  - {fileID: 11400000, guid: d0e76bd22679f964fa2cb1275f831eca, type: 2}
   poundObjects: []
   caveRiverObjects: []
   lastZoneObjects: []
@@ -880,6 +881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishingGameCanvas: {fileID: 0}
   hookBehaviour: {fileID: 0}
+  fishCaught: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
