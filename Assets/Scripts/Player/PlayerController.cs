@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -8,18 +9,25 @@ public class PlayerController : MonoBehaviour
     bool hasFish;
     [SerializeField] FishBehaviour fish;
 
+    [SerializeField] GameObject minigame; //
+
+    private void Start()                  //
+    {                                     // 
+        minigame.SetActive(false);        //
+    }                                     //
+
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.LeftArrow)) {
+        if(Input.GetKey(KeyCode.LeftArrow)) {
             transform.position += Vector3.left * speed * Time.deltaTime;
         }
-        if(Input.GetKeyDown(KeyCode.RightArrow)) {
+        if(Input.GetKey(KeyCode.RightArrow)) {
             transform.position += Vector3.right * speed * Time.deltaTime;
         }
-        if(Input.GetKeyDown(KeyCode.UpArrow)) {
+        if(Input.GetKey(KeyCode.UpArrow)) {
             transform.position += Vector3.up * speed * Time.deltaTime;
         }
-        if(Input.GetKeyDown(KeyCode.DownArrow)) {
+        if(Input.GetKey(KeyCode.DownArrow)) {
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
 
@@ -27,14 +35,14 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(LaunchFishingRod());
         }
 
-        if (hasFish)
+        /*if (hasFish)
         {
             if (Input.GetKeyDown(KeyCode.Space)) {
                 Debug.Log("Fish caught: " + fish.fishName);
                 hasFish = false;
                 StopAllCoroutines();
             }
-        }
+        }*/
     }
 
     IEnumerator LaunchFishingRod() {
@@ -43,11 +51,14 @@ public class PlayerController : MonoBehaviour
         hasFish = true;
         Debug.Log("IT'S A FISH");
         StartCoroutine(TimeToCatch());
+        
+        
     }
 
     IEnumerator TimeToCatch() {
-        yield return new WaitForSeconds(Random.Range(3, 5));
+        yield return new WaitForSeconds(1);
+        Debug.Log("test");//
+        minigame.SetActive(true); //
         hasFish = false;
-        Debug.Log("Fish escaped");
     }
 }
