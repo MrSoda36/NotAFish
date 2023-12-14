@@ -270,11 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishName: DevFish
-  weight: 0
-  speed: 0
-  depth: 0
-  value: 0
-  rarity: 0
+  speed: 5
 --- !u!70 &5160893572635813541
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -336,4 +332,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 6

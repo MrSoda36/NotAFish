@@ -9,9 +9,6 @@ public class HookBehaviour : MonoBehaviour
     [SerializeField] float depth;
     [SerializeField] FishBehaviour fish;
 
-    void Start() {
-        StartCoroutine(GoDown());
-    }
 
     void Update() {
         if(Input.GetKey(KeyCode.LeftArrow)) {
@@ -29,7 +26,6 @@ public class HookBehaviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.tag == "Fish") {
             fish = collision.gameObject.GetComponent<FishBehaviour>();
-            StopCoroutine(GoDown());
             Debug.Log("Fish caught: " + fish.fishName);
             Destroy(collision.gameObject);
             GoBackAtTop();
@@ -42,12 +38,5 @@ public class HookBehaviour : MonoBehaviour
 
     void GoBackAtTop() {
         transform.position = new Vector3(0, 5, 0);
-    }
-
-    IEnumerator GoDown() {
-        while(true) {
-            transform.position -= Vector3.up * speed * Time.deltaTime;
-            yield return null;
-        }
     }
 }
