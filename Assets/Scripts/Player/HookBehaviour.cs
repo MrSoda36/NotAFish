@@ -40,7 +40,7 @@ public class HookBehaviour : MonoBehaviour
         }
     }
 
-    void GoBackAtTop() {
+    public void GoBackAtTop() {
         transform.position = new Vector3(0, 5, 0);
     }
 
