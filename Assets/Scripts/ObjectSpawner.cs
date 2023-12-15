@@ -42,6 +42,7 @@ public class ObjectSpawner : MonoBehaviour
                 int randomIndex = Random.Range(0, obstacleLine1.Length);
                 while (obstacleLine1[randomIndex].activeInHierarchy) {
                     Debug.Log("Obstacle " + randomIndex + " already active in Line 1");
+                    randomIndex = Random.Range(0, obstacleLine1.Length);
                 }
                 obstacleLine1[randomIndex].SetActive(true);
                 obstacleSpawned++;
@@ -55,6 +56,7 @@ public class ObjectSpawner : MonoBehaviour
                 int randomIndex = Random.Range(0, obstacleLine2.Length);
                 while (obstacleLine2[randomIndex].activeInHierarchy) {
                     Debug.Log("Obstacle " + randomIndex + " already active in Line 2");
+                    randomIndex = Random.Range(0, obstacleLine2.Length);
                 }
                 obstacleLine2[randomIndex].SetActive(true);
                 obstacleSpawned++;

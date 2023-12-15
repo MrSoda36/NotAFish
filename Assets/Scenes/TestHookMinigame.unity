@@ -1283,7 +1283,7 @@ MonoBehaviour:
   - {fileID: 1266799520}
   - {fileID: 1701208370}
   - {fileID: 1054975112}
-  difficulty: 1
+  difficulty: 2
 --- !u!1001 &1306699071
 PrefabInstance:
   m_ObjectHideFlags: 0
