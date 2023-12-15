@@ -14,6 +14,12 @@ public class FishingObjectsList : MonoBehaviour
             return _instance;
         }
     }
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+        _instance = this;
+    }
     /// <summary>
     /// Objets pouvant être pêchés dans l'océan (première zone de pêche)
     /// </summary>
