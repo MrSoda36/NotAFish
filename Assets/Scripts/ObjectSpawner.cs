@@ -10,8 +10,12 @@ public class ObjectSpawner : MonoBehaviour
     List<GameObject> activeObstacles1;
     List<GameObject> activeObstacles2;
 
+    public int difficulty = 1;
+    int objectToSpawn = 0;
+
     void Start() {
         DesactivateAllObstacles();
+        SetupDifficulty(difficulty);
         SpawnObstacleLines(1);
         SpawnObstacleLines(2);
     }
@@ -25,31 +29,38 @@ public class ObjectSpawner : MonoBehaviour
             DesactivateAllObstacles();
         }
     }
+
+    void SetupDifficulty(int newDifficulty) {
+        difficulty = newDifficulty;
+        objectToSpawn = 2 + difficulty;
+    }
     
     void SpawnObstacleLines(int lineIndex) {
         if(lineIndex == 1) {
             int obstacleSpawned = 0;
-            while (obstacleSpawned != 3) {
+            while (obstacleSpawned != objectToSpawn) {
                 int randomIndex = Random.Range(0, obstacleLine1.Length);
-                if (obstacleLine1[randomIndex].activeInHierarchy) {
-                    return;
+                while (obstacleLine1[randomIndex].activeInHierarchy) {
+                    Debug.Log("Obstacle " + randomIndex + " already active in Line 1");
                 }
                 obstacleLine1[randomIndex].SetActive(true);
                 obstacleSpawned++;
-                Debug.Log("Spawned obstacle " + randomIndex);
+                Debug.Log("Spawned " + obstacleSpawned + " obstacles in Line 1");
             }
+            Debug.Log("Spawned all " + objectToSpawn + " obstacles in Line 1");
         }
         if(lineIndex == 2) {
             int obstacleSpawned = 0;
-            while (obstacleSpawned != 3) {
+            while (obstacleSpawned != objectToSpawn) {
                 int randomIndex = Random.Range(0, obstacleLine2.Length);
-                if (obstacleLine2[randomIndex].activeInHierarchy) {
-                    return;
+                while (obstacleLine2[randomIndex].activeInHierarchy) {
+                    Debug.Log("Obstacle " + randomIndex + " already active in Line 2");
                 }
                 obstacleLine2[randomIndex].SetActive(true);
                 obstacleSpawned++;
-                Debug.Log("Spawned obstacle " + randomIndex);
+                Debug.Log("Spawned " + obstacleSpawned + " obstacles in Line 2");
             }
+            Debug.Log("Spawned all " + objectToSpawn + " obstacles in Line 2");
         }
 
              
