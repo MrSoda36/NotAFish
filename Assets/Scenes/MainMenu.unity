@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a8cebbd050b394697f047e2a25cee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Beach
+  sceneName: LevelSelector
 --- !u!1 &163665454
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,10 +634,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a0fc9ed14a04d488cf7a76816a5a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oceanObjects:
+  beachObjects:
+  - {fileID: 11400000, guid: 235c3760145657043b083d109ed040e8, type: 2}
+  - {fileID: 11400000, guid: 90d4774fe4f1ee7449bbcaa9e29e1688, type: 2}
   - {fileID: 11400000, guid: d0e76bd22679f964fa2cb1275f831eca, type: 2}
-  - {fileID: 11400000, guid: 1b8382de908fa9949a847f6447a2f01c, type: 2}
-  poundObjects: []
+  - {fileID: 11400000, guid: f7f8bc825b087c945b6837a4640be559, type: 2}
+  pondObjects: []
   caveRiverObjects: []
   lastZoneObjects: []
 --- !u!1 &1510709889
@@ -990,8 +992,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ac0e673a54a5e4c8f4a2a09b86caf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishCaught: {fileID: 0}
   fishingSceneName: 
+  isFishCaught: 0
+  levelUnlocked: 1
 --- !u!1 &2134303930
 GameObject:
   m_ObjectHideFlags: 0

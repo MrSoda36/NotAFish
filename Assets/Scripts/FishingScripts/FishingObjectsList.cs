@@ -23,15 +23,15 @@ public class FishingObjectsList : MonoBehaviour
     /// <summary>
     /// Objets pouvant être pêchés dans l'océan (première zone de pêche)
     /// </summary>
-    public List<FishScriptableObjects> oceanObjects = new List<FishScriptableObjects>();
+    public List<FishScriptableObjects> beachObjects = new List<FishScriptableObjects>();
     /// <summary>
     /// Objets pouvant être pêchés dans l'étang (deuxième zone de pêche)
     /// </summary>
-    public List<FishScriptableObjects> poundObjects= new List<FishScriptableObjects>();
+    public List<FishScriptableObjects> pondObjects = new List<FishScriptableObjects>();
     /// <summary>
     /// Objets pouvant être pêchés dans la rivière dans la grotte (troisième zone de pêche)
     /// </summary>
-    public List<FishScriptableObjects> caveRiverObjects= new List<FishScriptableObjects>();
+    public List<FishScriptableObjects> caveRiverObjects = new List<FishScriptableObjects>();
     /// <summary>
     /// Objets pouvant être pêchés dans la dernière zone 
     /// </summary>

@@ -13,6 +13,8 @@ public class FishCaught : MonoBehaviour
     public TextMeshProUGUI FishName;
     public TextMeshProUGUI FishDescription;
 
+    public FishCollected fishCollected;
+
     public void Start()
     {
         if (FishingGameManager.Instance.isFishCaught) {
@@ -38,26 +40,35 @@ public class FishCaught : MonoBehaviour
         switch (FishingGameManager.Instance.fishingSceneName)
         {
             case "Beach":
+                index = Random.Range(0, FishingObjectsList.Instance.beachObjects.Count - 1);
+                PrintFishCaught(FishingObjectsList.Instance.beachObjects[index]);
+                fishCollected.beachFishCount++;
 
-                index = Random.Range(0, FishingObjectsList.Instance.oceanObjects.Count - 1);
-                PrintFishCaught(FishingObjectsList.Instance.oceanObjects[index]);
+                FishingObjectsList.Instance.beachObjects.Remove(FishingObjectsList.Instance.beachObjects[index]);
+                fishCollected.CheckFishCollected(FishingObjectsList.Instance.beachObjects);
 
-                FishingObjectsList.Instance.oceanObjects.Remove(FishingObjectsList.Instance.oceanObjects[index]);
                 break;
             case "Forest":
+                index = Random.Range(0, FishingObjectsList.Instance.pondObjects.Count - 1);
+                PrintFishCaught(FishingObjectsList.Instance.pondObjects[index]);
+                fishCollected.pondFishCount++;
 
-                index = Random.Range(0, FishingObjectsList.Instance.poundObjects.Count - 1);
-                PrintFishCaught(FishingObjectsList.Instance.poundObjects[index]);
+                FishingObjectsList.Instance.pondObjects.Remove(FishingObjectsList.Instance.pondObjects[index]);
+                fishCollected.CheckFishCollected(FishingObjectsList.Instance.pondObjects);
 
-                FishingObjectsList.Instance.poundObjects.Remove(FishingObjectsList.Instance.poundObjects[index]);
                 break;
             case "Cave":
-
                 index = Random.Range(0, FishingObjectsList.Instance.caveRiverObjects.Count - 1);
                 PrintFishCaught(FishingObjectsList.Instance.caveRiverObjects[index]);
+                fishCollected.caveRiverFishCount++;
 
                 FishingObjectsList.Instance.caveRiverObjects.Remove(FishingObjectsList.Instance.caveRiverObjects[index]);
+                fishCollected.CheckFishCollected(FishingObjectsList.Instance.caveRiverObjects);
+
                 break;
         } 
+
+
     }
+
 }
