@@ -639,6 +639,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 90d4774fe4f1ee7449bbcaa9e29e1688, type: 2}
   - {fileID: 11400000, guid: d0e76bd22679f964fa2cb1275f831eca, type: 2}
   - {fileID: 11400000, guid: f7f8bc825b087c945b6837a4640be559, type: 2}
+  - {fileID: 11400000, guid: af877f3880583144baf8f0862baa6676, type: 2}
   pondObjects: []
   caveRiverObjects: []
   lastZoneObjects: []
