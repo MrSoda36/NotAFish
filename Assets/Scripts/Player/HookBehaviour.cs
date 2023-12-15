@@ -35,11 +35,12 @@ public class HookBehaviour : MonoBehaviour
             fish = collision.gameObject.GetComponent<FishBehaviour>();
             Debug.Log("Fish caught: " + fish.fishName);
             Destroy(collision.gameObject);
-            GoBackAtTop();
+
+            FishingGameManager.Instance.FishingGameWon();
         }
-        if(collision.gameObject.tag == "Ground") {
+        if(collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Wall") {
             //Debug.Log("Ground hit");
-            GoBackAtTop();
+            FishingGameManager.Instance.FishingGameLost();
         }
     }
 

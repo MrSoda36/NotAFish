@@ -23,9 +23,8 @@ public class FishingGameManager : MonoBehaviour
 
 
 
-    public FishCaught fishCaught;
     public string fishingSceneName;
-
+    public bool isFishCaught;
 
     // Démarrer le jeu
     public void LaunchFishingGame() {
@@ -37,33 +36,8 @@ public class FishingGameManager : MonoBehaviour
     // jeu terminé avec Poisson attrapé
     public void FishingGameWon() {
 
+        isFishCaught= true;
         SceneManager.LoadScene(fishingSceneName);
-        int index = 0;
-
-        switch (fishingSceneName)
-        {
-            case "Beach":
-
-                index = Random.Range(0, FishingObjectsList.Instance.oceanObjects.Count - 1);
-                fishCaught.PrintFishCaught(FishingObjectsList.Instance.oceanObjects[index]);
-
-                FishingObjectsList.Instance.oceanObjects.Remove(FishingObjectsList.Instance.oceanObjects[index]);
-                break;
-            case "Forest":
-
-                index = Random.Range(0, FishingObjectsList.Instance.poundObjects.Count - 1);
-                fishCaught.PrintFishCaught(FishingObjectsList.Instance.poundObjects[index]);
-
-                FishingObjectsList.Instance.poundObjects.Remove(FishingObjectsList.Instance.poundObjects[index]);
-                break;
-            case "Cave":
-
-                index = Random.Range(0, FishingObjectsList.Instance.caveRiverObjects.Count - 1);
-                fishCaught.PrintFishCaught(FishingObjectsList.Instance.caveRiverObjects[index]);
-
-                FishingObjectsList.Instance.caveRiverObjects.Remove(FishingObjectsList.Instance.caveRiverObjects[index]);
-                break;
-        }
     }
 
     // jeu terminé avec poisson raté
