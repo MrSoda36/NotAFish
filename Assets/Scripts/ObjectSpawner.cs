@@ -1,14 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {   
     public GameObject[] obstacleLine1;
     public GameObject[] obstacleLine2;
-
-    List<GameObject> activeObstacles1;
-    List<GameObject> activeObstacles2;
 
     public int difficulty = 1;
     int objectToSpawn = 0;
@@ -41,12 +36,10 @@ public class ObjectSpawner : MonoBehaviour
             while (obstacleSpawned != objectToSpawn) {
                 int randomIndex = Random.Range(0, obstacleLine1.Length);
                 while (obstacleLine1[randomIndex].activeInHierarchy) {
-                    Debug.Log("Obstacle " + randomIndex + " already active in Line 1");
                     randomIndex = Random.Range(0, obstacleLine1.Length);
                 }
                 obstacleLine1[randomIndex].SetActive(true);
                 obstacleSpawned++;
-                Debug.Log("Spawned " + obstacleSpawned + " obstacles in Line 1");
             }
             Debug.Log("Spawned all " + objectToSpawn + " obstacles in Line 1");
         }
@@ -55,12 +48,10 @@ public class ObjectSpawner : MonoBehaviour
             while (obstacleSpawned != objectToSpawn) {
                 int randomIndex = Random.Range(0, obstacleLine2.Length);
                 while (obstacleLine2[randomIndex].activeInHierarchy) {
-                    Debug.Log("Obstacle " + randomIndex + " already active in Line 2");
                     randomIndex = Random.Range(0, obstacleLine2.Length);
                 }
                 obstacleLine2[randomIndex].SetActive(true);
                 obstacleSpawned++;
-                Debug.Log("Spawned " + obstacleSpawned + " obstacles in Line 2");
             }
             Debug.Log("Spawned all " + objectToSpawn + " obstacles in Line 2");
         }
