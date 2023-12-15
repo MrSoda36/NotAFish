@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FishingGameManager : MonoBehaviour
 {
@@ -21,29 +22,53 @@ public class FishingGameManager : MonoBehaviour
     }
 
 
-    public GameObject fishingGameCanvas;
 
-    public HookBehaviour hookBehaviour;
     public FishCaught fishCaught;
+    public string fishingSceneName;
 
 
     // Démarrer le jeu
     public void LaunchFishingGame() {
 
-        // Méthode pour faire apparaître le poisson caché
-        // Méthode pour faire apparître les obstacles
-        hookBehaviour.GoBackAtTop();
-
-        fishingGameCanvas.SetActive(true);
+        fishingSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("HookMiniGame");
     }
 
-    // Poisson attrapé ou raté -> Fin du jeu
-    public void FishingGameEnded() {
+    // jeu terminé avec Poisson attrapé
+    public void FishingGameWon() {
 
+        SceneManager.LoadScene(fishingSceneName);
+        int index = 0;
 
-        fishingGameCanvas.SetActive(false);
-        // faut savoir dans quel point d'eau le joueur se situe
-        fishCaught.PrintFishCaught(FishingObjectsList.Instance.oceanObjects[0]);
+        switch (fishingSceneName)
+        {
+            case "Beach":
 
+                index = Random.Range(0, FishingObjectsList.Instance.oceanObjects.Count - 1);
+                fishCaught.PrintFishCaught(FishingObjectsList.Instance.oceanObjects[index]);
+
+                FishingObjectsList.Instance.oceanObjects.Remove(FishingObjectsList.Instance.oceanObjects[index]);
+                break;
+            case "Forest":
+
+                index = Random.Range(0, FishingObjectsList.Instance.poundObjects.Count - 1);
+                fishCaught.PrintFishCaught(FishingObjectsList.Instance.poundObjects[index]);
+
+                FishingObjectsList.Instance.poundObjects.Remove(FishingObjectsList.Instance.poundObjects[index]);
+                break;
+            case "Cave":
+
+                index = Random.Range(0, FishingObjectsList.Instance.caveRiverObjects.Count - 1);
+                fishCaught.PrintFishCaught(FishingObjectsList.Instance.caveRiverObjects[index]);
+
+                FishingObjectsList.Instance.caveRiverObjects.Remove(FishingObjectsList.Instance.caveRiverObjects[index]);
+                break;
+        }
+    }
+
+    // jeu terminé avec poisson raté
+    public void FishingGameLost() {
+
+        SceneManager.LoadScene(fishingSceneName);
     }
 }
