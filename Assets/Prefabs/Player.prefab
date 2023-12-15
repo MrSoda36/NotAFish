@@ -172,3 +172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  fish: {fileID: 0}
+  minigame: {fileID: 0}
+  canFish: 0

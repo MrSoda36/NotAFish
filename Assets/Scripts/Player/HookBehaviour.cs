@@ -8,14 +8,16 @@ public class HookBehaviour : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float depth;
     [SerializeField] FishBehaviour fish;
+    [SerializeField] Transform startPoint;
 
     private void Start() {
-        GoBackAtTop();
+        this.gameObject.transform.position = startPoint.position;
         this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
     }
 
     void Update() {
         this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+        transform.position += Vector3.down * 2 * Time.deltaTime;
         if(Input.GetKey(KeyCode.LeftArrow)) {
             transform.position += Vector3.left * speed * Time.deltaTime;
         }
@@ -23,7 +25,7 @@ public class HookBehaviour : MonoBehaviour
             transform.position += Vector3.right * speed * Time.deltaTime;
         }
         if(Input.GetKey(KeyCode.UpArrow)) {
-            transform.position += Vector3.up * speed * Time.deltaTime;
+            transform.position += Vector3.up * 1 * Time.deltaTime;
         }
 
     }
@@ -42,6 +44,6 @@ public class HookBehaviour : MonoBehaviour
     }
 
     public void GoBackAtTop() {
-        transform.position = new Vector3(0, 5, 0);
+        transform.position = startPoint.position;
     }
 }
