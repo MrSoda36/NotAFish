@@ -9,14 +9,14 @@ public class FishBehaviour : MonoBehaviour
 
     uint direction = 0;
 
-    private void Update() {
+    private void FixedUpdate() {
         if (direction == 0) {
             transform.position += Vector3.left * speed * Time.deltaTime;
-            //this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
         else {
             transform.position += Vector3.right * speed * Time.deltaTime;
-            //this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
     }
 

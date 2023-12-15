@@ -15,7 +15,7 @@ public class HookBehaviour : MonoBehaviour
         this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
     }
 
-    void Update() {
+    void FixedUpdate() {
         this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
         transform.position += Vector3.down * 2 * Time.deltaTime;
         if(Input.GetKey(KeyCode.LeftArrow)) {

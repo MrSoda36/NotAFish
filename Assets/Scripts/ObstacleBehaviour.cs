@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class ObstacleBehaviour : MonoBehaviour
@@ -8,61 +9,45 @@ public class ObstacleBehaviour : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] List<Vector3> Directions;
     private Vector3 Direction;
-    private bool isCollision;
+    private Rigidbody2D rb;
+    public bool isBouncing = false;
 
 
 
-    // Start is called before the first frame update
     void Start()
     {
         Direction = ChooseDirection();
-        Debug.Log(Direction);
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (!isCollision)
+        if (!isBouncing)
         {
-            this.transform.position += Direction * speed * Time.deltaTime;
+            rb.MovePosition(transform.position + Direction * speed * Time.deltaTime);
         }
-        else
-        {
-            if(Direction == new Vector3(1, 1, 0))
-            {
-                this.transform.position += new Vector3(-1, 1, 0) * speed * Time.deltaTime;
-            }
-            else if(Direction == new Vector3(1, -1, 0))
-            {
-                this.transform.position += new Vector3(-1, -1, 0) * speed * Time.deltaTime;
-            }
-            else if(Direction == new Vector3(-1, -1, 0))
-            {
-                this.transform.position += new Vector3(1, -1, 0) * speed * Time.deltaTime;
-            }
-            else if (Direction == new Vector3(-1, 1, 0))
-            {
-                this.transform.position += new Vector3(1, 1, 0) * speed * Time.deltaTime;
-            }
+        else {
+            rb.MovePosition(transform.position + -Direction * speed * Time.deltaTime);
 
-            else
-            {
-                this.transform.position -= Direction * speed * Time.deltaTime;
-            }
-            
         }
     }
 
     private Vector3 ChooseDirection()
     {
-        Vector3 Direction = Directions[Random.Range(0, 8)];
+        Vector3 Direction = Directions[Random.Range(0, Directions.Count-1)];
         return Direction;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Ground")
         {
-            isCollision = true;
+            if(isBouncing) {
+                isBouncing = false;
+            }
+            else {
+                isBouncing = true;
+            }
         }
     }
 
