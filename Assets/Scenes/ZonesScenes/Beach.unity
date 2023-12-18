@@ -2447,9 +2447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 969c252a5652f9948a87953cc8e2618e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beachFishCount: 0
-  pondFishCount: 0
-  caveRiverFishCount: 0
   gameStatusUI: {fileID: 2033520520}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

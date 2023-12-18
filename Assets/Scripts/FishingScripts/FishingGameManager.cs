@@ -1,6 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class FishingGameManager : MonoBehaviour
@@ -16,15 +16,27 @@ public class FishingGameManager : MonoBehaviour
         } 
     }
 
-    private void Awake() {
-        DontDestroyOnLoad(this);
-        _instance = this;
+    public void Awake() {
+        if(Instance == null && Instance != this) {
+            Destroy(this);
+        }
+        else {
+            _instance = this;
+            DontDestroyOnLoad(this);
+        }
+        
     }
 
 
 
     public string fishingSceneName;
     public bool isFishCaught;
+
+    public bool allBeachFishesCollected;
+    public bool allForestFishesCollected;
+    public bool allCaveFishesCollected;
+
+    public bool allFishesCollected;
 
 
     // Démarrer le jeu
@@ -47,4 +59,24 @@ public class FishingGameManager : MonoBehaviour
         SceneManager.LoadScene(fishingSceneName);
     }
 
+    public void FishesCollected() {
+        switch (fishingSceneName) {
+            case "Beach":
+                allBeachFishesCollected = true;
+                break;
+
+            case "Forest":
+                allForestFishesCollected = true;
+                break;
+
+            case "Cave":
+                allCaveFishesCollected = true;
+                break;
+        }
+
+        if (allBeachFishesCollected && allForestFishesCollected && allCaveFishesCollected) {
+
+            allFishesCollected = true;
+        }
+    }
 }
