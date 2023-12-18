@@ -6,22 +6,14 @@ using UnityEngine.SceneManagement;
 public class FishingGameManager : MonoBehaviour
 {
   
-    private static FishingGameManager _instance;
-    public static FishingGameManager Instance {
-        get {
-            if (_instance == null) { 
-                Debug.Log("FishingGameManager is null"); 
-            }
-            return _instance;
-        } 
-    }
+    public static FishingGameManager Instance { get; private set; }
 
     public void Awake() {
-        if(Instance == null && Instance != this) {
+        if(Instance != null && Instance != this) {
             Destroy(this);
         }
         else {
-            _instance = this;
+            Instance = this;
             DontDestroyOnLoad(this);
         }
         

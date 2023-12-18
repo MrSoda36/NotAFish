@@ -9,10 +9,12 @@ public class HookBehaviour : MonoBehaviour
     [SerializeField] float depth;
     [SerializeField] FishBehaviour fish;
     [SerializeField] Transform startPoint;
+    [SerializeField] ParticleSystem sparkle;
 
     private void Start() {
         this.gameObject.transform.position = startPoint.position;
         this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+        sparkle = GetComponentInChildren<ParticleSystem>();
     }
 
     void FixedUpdate() {
@@ -40,8 +42,14 @@ public class HookBehaviour : MonoBehaviour
         }
         if(collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Wall") {
             //Debug.Log("Ground hit");
-            FishingGameManager.Instance.FishingGameLost();
+            StartCoroutine(WallHit());
         }
+    }
+
+    IEnumerator WallHit() {
+        sparkle.Play();
+        yield return new WaitForSeconds(0.5f);
+        FishingGameManager.Instance.FishingGameLost();
     }
 
     public void GoBackAtTop() {
