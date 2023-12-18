@@ -11,7 +11,6 @@ public class FishBehaviour : MonoBehaviour
     uint direction = 0;
 
     private void Start() {
-        particle = GetComponentInChildren<ParticleSystem>();
         particle.Stop();
     }
 

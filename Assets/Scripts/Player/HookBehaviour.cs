@@ -11,14 +11,16 @@ public class HookBehaviour : MonoBehaviour
     [SerializeField] Transform startPoint;
     [SerializeField] ParticleSystem sparkle;
 
+    Rigidbody2D rb;
+
     private void Start() {
         this.gameObject.transform.position = startPoint.position;
-        this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
-        sparkle = GetComponentInChildren<ParticleSystem>();
+        rb = this.gameObject.GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0;
     }
 
     void FixedUpdate() {
-        this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+        rb.gravityScale = 1;
         transform.position += Vector3.down * 2 * Time.deltaTime;
         if(Input.GetKey(KeyCode.LeftArrow)) {
             transform.position += Vector3.left * speed * Time.deltaTime;
@@ -40,16 +42,14 @@ public class HookBehaviour : MonoBehaviour
             fish = collision.gameObject.GetComponent<FishBehaviour>();
             Debug.Log("Fish caught: " + fish.fishName);
         }
-        if(collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Wall") {
+        if(collision.gameObject.tag == "Ground") {
             //Debug.Log("Ground hit");
-            StartCoroutine(WallHit());
+            FishingGameManager.Instance.FishingGameLost();
         }
-    }
-
-    IEnumerator WallHit() {
-        sparkle.Play();
-        yield return new WaitForSeconds(0.5f);
-        FishingGameManager.Instance.FishingGameLost();
+        if(collision.gameObject.tag == "Wall") {
+            //Debug.Log("Wall hit");
+            sparkle.Play();
+        }
     }
 
     public void GoBackAtTop() {
