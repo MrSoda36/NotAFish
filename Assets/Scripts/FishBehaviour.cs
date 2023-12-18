@@ -6,8 +6,14 @@ public class FishBehaviour : MonoBehaviour
 {
     [SerializeField] public string fishName;
     [SerializeField] float speed;
+    [SerializeField] ParticleSystem particle;
 
     uint direction = 0;
+
+    private void Start() {
+        particle = GetComponentInChildren<ParticleSystem>();
+        particle.Stop();
+    }
 
     private void FixedUpdate() {
         if (direction == 0) {
@@ -29,5 +35,17 @@ public class FishBehaviour : MonoBehaviour
                 direction = 0;
             }
         }
+
+        if(collision.gameObject.tag == "Player") {
+            StartCoroutine(FishCatched());
+        }
+    }
+
+    IEnumerator FishCatched() {
+        speed = 0;
+        particle.Play();
+        yield return new WaitForSeconds(0.5f);
+        Destroy(this.gameObject);
+        FishingGameManager.Instance.FishingGameWon();
     }
 }
