@@ -995,7 +995,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishingSceneName: 
   isFishCaught: 0
-  levelUnlocked: 1
 --- !u!1 &2134303930
 GameObject:
   m_ObjectHideFlags: 0
