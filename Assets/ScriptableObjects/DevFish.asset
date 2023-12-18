@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: DevFish
   m_EditorClassIdentifier: 
   itemName: DevFish
-  itemDescription: Placeholder Fish
+  itemDescription: Debug.Log(!isThisAFish)
   itemSprite: {fileID: 21300000, guid: 4bde59b4cc4a8864588f1974fca8c96a, type: 3}
