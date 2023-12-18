@@ -636,13 +636,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beachObjects:
   - {fileID: 11400000, guid: 235c3760145657043b083d109ed040e8, type: 2}
-  - {fileID: 11400000, guid: 90d4774fe4f1ee7449bbcaa9e29e1688, type: 2}
-  - {fileID: 11400000, guid: d0e76bd22679f964fa2cb1275f831eca, type: 2}
-  - {fileID: 11400000, guid: f7f8bc825b087c945b6837a4640be559, type: 2}
-  - {fileID: 11400000, guid: af877f3880583144baf8f0862baa6676, type: 2}
+  - {fileID: 11400000, guid: 235c3760145657043b083d109ed040e8, type: 2}
+  - {fileID: 11400000, guid: 235c3760145657043b083d109ed040e8, type: 2}
   pondObjects: []
   caveRiverObjects: []
   lastZoneObjects: []
+  beachObjectsClone: []
+  pondObjectsClone: []
+  caveRiverObjectsClone: []
 --- !u!1 &1510709889
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,7 +976,7 @@ Transform:
   m_GameObject: {fileID: 2099581198}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 834.9127, y: 563.9762, z: 3.4726186}
+  m_LocalPosition: {x: 0, y: 0, z: 3.4726186}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -995,6 +996,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishingSceneName: 
   isFishCaught: 0
+  allBeachFishesCollected: 0
+  allForestFishesCollected: 0
+  allCaveFishesCollected: 0
+  allFishesCollected: 0
 --- !u!1 &2134303930
 GameObject:
   m_ObjectHideFlags: 0

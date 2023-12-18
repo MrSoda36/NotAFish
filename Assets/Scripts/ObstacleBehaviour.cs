@@ -17,6 +17,7 @@ public class ObstacleBehaviour : MonoBehaviour
     void Start()
     {
         Direction = ChooseDirection();
+        speed = ChooseSpeed();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -24,10 +25,10 @@ public class ObstacleBehaviour : MonoBehaviour
     {
         if (!isBouncing)
         {
-            rb.MovePosition(transform.position + Direction * speed * Time.deltaTime);
+            rb.MovePosition(transform.position + speed * Time.deltaTime * Direction);
         }
         else {
-            rb.MovePosition(transform.position + -Direction * speed * Time.deltaTime);
+            rb.MovePosition(transform.position + speed * Time.deltaTime * -Direction);
 
         }
     }
@@ -38,15 +39,22 @@ public class ObstacleBehaviour : MonoBehaviour
         return Direction;
     }
 
+    private float ChooseSpeed() {
+        float Speed = Random.Range(2f, 3f);
+        return Speed;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Ground")
         {
             if(isBouncing) {
                 isBouncing = false;
+                speed = ChooseSpeed();
             }
             else {
                 isBouncing = true;
+                speed = ChooseSpeed();
             }
         }
     }

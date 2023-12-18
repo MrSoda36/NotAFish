@@ -1,5 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FishingObjectsList : MonoBehaviour
@@ -39,7 +39,7 @@ public class FishingObjectsList : MonoBehaviour
 
 
 
-    public List<FishScriptableObjects> beachObjectsClone = new();
+    public List<FishScriptableObjects> beachObjectsClone;
 
     public List<FishScriptableObjects> pondObjectsClone = new();
 
@@ -47,7 +47,7 @@ public class FishingObjectsList : MonoBehaviour
 
     private void Start()
     {
-        beachObjectsClone = beachObjects;
+        beachObjectsClone = new List<FishScriptableObjects>(beachObjects);
 
         pondObjectsClone = pondObjects;
 
