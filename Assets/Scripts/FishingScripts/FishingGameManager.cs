@@ -26,7 +26,6 @@ public class FishingGameManager : MonoBehaviour
     public string fishingSceneName;
     public bool isFishCaught;
 
-    public int levelUnlocked = 1;
 
     // Démarrer le jeu
     public void LaunchFishingGame() {
@@ -48,19 +47,4 @@ public class FishingGameManager : MonoBehaviour
         SceneManager.LoadScene(fishingSceneName);
     }
 
-    public void UnlockNewLevel() {
-
-        switch(levelUnlocked)
-        {
-            case 2: // Niveau 2 unlocked
-
-                break;
-            case 3: // Niveau 3 Unlocked
-
-                break;
-            case 4: // Last Level Unlocked
-
-                break;
-        }
-    }
 }

@@ -10,7 +10,7 @@ public class ObjectSpawner : MonoBehaviour
 
     void Start() {
         DesactivateAllObstacles();
-        SetupDifficulty(difficulty);
+        SetupDifficulty();
         SpawnObstacleLines(1);
         SpawnObstacleLines(2);
     }
@@ -25,8 +25,20 @@ public class ObjectSpawner : MonoBehaviour
         }
     }
 
-    void SetupDifficulty(int newDifficulty) {
-        difficulty = newDifficulty;
+    void SetupDifficulty() {
+        
+        switch (FishingGameManager.Instance.fishingSceneName)
+        {
+            case "Beach":
+                difficulty = 1;
+                break;
+            case "Forest":
+                difficulty = 2;
+                break;
+            case "Cave":
+                difficulty = 3;
+                break;
+        }
         objectToSpawn = 2 + difficulty;
     }
     

@@ -38,4 +38,20 @@ public class FishingObjectsList : MonoBehaviour
     public List<FishScriptableObjects> lastZoneObjects = new List<FishScriptableObjects>();
 
 
+
+    public List<FishScriptableObjects> beachObjectsClone = new();
+
+    public List<FishScriptableObjects> pondObjectsClone = new();
+
+    public List<FishScriptableObjects> caveRiverObjectsClone = new();
+
+    private void Start()
+    {
+        beachObjectsClone = beachObjects;
+
+        pondObjectsClone = pondObjects;
+
+        caveRiverObjectsClone = caveRiverObjects;
+    }
+
 }

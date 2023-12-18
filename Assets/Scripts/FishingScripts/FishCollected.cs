@@ -18,8 +18,6 @@ public class FishCollected : MonoBehaviour
             gameStatusUI.statusText.text = "You collected enough items, you can now have access to the next level.";
 
 
-            FishingGameManager.Instance.levelUnlocked++;
-            FishingGameManager.Instance.UnlockNewLevel();
         }
         if(list.Count == 0) { // Status : You collected all items here
             gameStatusUI.gameStatusPanel.SetActive(true);
