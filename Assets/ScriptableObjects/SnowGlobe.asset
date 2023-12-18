@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c180b6b93e90764aa65a1e219f555d3, type: 3}
-  m_Name: Fidget
+  m_Name: SnowGlobe
   m_EditorClassIdentifier: 
-  itemName: Fidget spinner
-  itemDescription: Therapeutic tool for children.
-  itemSprite: {fileID: 21300000, guid: 7a7f803f6b980d942bf6e6c78104765c, type: 3}
+  itemName: Snow Globe
+  itemDescription: All I want for Christmas...
+  itemSprite: {fileID: 21300000, guid: 0f3aaa7deab440142ac50b3811100d8e, type: 3}

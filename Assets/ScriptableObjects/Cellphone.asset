@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c180b6b93e90764aa65a1e219f555d3, type: 3}
-  m_Name: Fidget
+  m_Name: Cellphone
   m_EditorClassIdentifier: 
-  itemName: Fidget spinner
-  itemDescription: Therapeutic tool for children.
-  itemSprite: {fileID: 21300000, guid: 7a7f803f6b980d942bf6e6c78104765c, type: 3}
+  itemName: Cellphone
+  itemDescription: Does it still work ?
+  itemSprite: {fileID: 21300000, guid: 5cfeb68291fe3f348a1c75039c82e816, type: 3}
