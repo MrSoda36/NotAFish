@@ -27,6 +27,9 @@ public class HookBehaviour : MonoBehaviour
         if(Input.GetKey(KeyCode.UpArrow)) {
             transform.position += Vector3.up * 1 * Time.deltaTime;
         }
+        if(Input.GetKey(KeyCode.DownArrow)) {
+            transform.position += Vector3.down * speed * Time.deltaTime;
+        }
 
     }
 
