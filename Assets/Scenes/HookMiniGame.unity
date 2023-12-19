@@ -2085,7 +2085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 1435083064}
-  m_PathPosition: 1
+  m_PathPosition: 0
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
@@ -2109,7 +2109,7 @@ Transform:
   m_GameObject: {fileID: 3424035439747057885}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -9, z: 5}
+  m_LocalPosition: {x: 0, y: 9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2130,7 +2130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1473692545808588309, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1473692545808588309, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2186,14 +2186,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1308287098}
     m_Modifications:
     - target: {fileID: 3325662662646400015, guid: 3d51217f69d6c284c883ee4862b9f54a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3325662662646400015, guid: 3d51217f69d6c284c883ee4862b9f54a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3325662662646400015, guid: 3d51217f69d6c284c883ee4862b9f54a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
       objectReference: {fileID: 0}
@@ -2236,34 +2228,6 @@ PrefabInstance:
     - target: {fileID: 5424825855395580944, guid: 3d51217f69d6c284c883ee4862b9f54a, type: 3}
       propertyPath: m_Name
       value: Wall
-      objectReference: {fileID: 0}
-    - target: {fileID: 6685090383663641612, guid: 3d51217f69d6c284c883ee4862b9f54a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: bfef8a075ee90404f935b854338cb26e, type: 3}
-    - target: {fileID: 9084387284442036267, guid: 3d51217f69d6c284c883ee4862b9f54a, type: 3}
-      propertyPath: m_Size.x
-      value: 0.61354446
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084387284442036267, guid: 3d51217f69d6c284c883ee4862b9f54a, type: 3}
-      propertyPath: m_Size.y
-      value: 6.0366116
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084387284442036267, guid: 3d51217f69d6c284c883ee4862b9f54a, type: 3}
-      propertyPath: m_Offset.x
-      value: -1.8911767
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084387284442036267, guid: 3d51217f69d6c284c883ee4862b9f54a, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.114468575
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084387284442036267, guid: 3d51217f69d6c284c883ee4862b9f54a, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 3.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084387284442036267, guid: 3d51217f69d6c284c883ee4862b9f54a, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 6.26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
