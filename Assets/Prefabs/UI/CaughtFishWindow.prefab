@@ -365,7 +365,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Doll
+  m_text: 'BaseBall Bat
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33f3d1c702abe3c439769e3b8a0284f2, type: 2}
   m_sharedMaterial: {fileID: 781695630691213899, guid: 33f3d1c702abe3c439769e3b8a0284f2, type: 2}
@@ -392,12 +394,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
+  m_fontSize: 26.35
   m_fontSizeBase: 35
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 37
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -493,9 +495,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -628,7 +630,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8538497060434205185}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9129746931364402486}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9012227976006223716
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,8 +677,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 370, y: -237}
-  m_SizeDelta: {x: 181.5504, y: 75.8295}
+  m_AnchoredPosition: {x: 365.12805, y: -237}
+  m_SizeDelta: {x: 178.7594, y: 75.8295}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8887391322696558651
 CanvasRenderer:
@@ -721,12 +735,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
+  m_fontSize: 25
   m_fontSizeBase: 16
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 13
+  m_fontSizeMax: 25
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -757,7 +771,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.7800064, w: -0.983551}
+  m_margin: {x: 6.8507156, y: 3.805954, z: 5.8170013, w: 3.8373451}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -772,14 +786,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3957948329400497260}
-  - component: {fileID: 3791470974870843764}
   m_Layer: 5
   m_Name: CaughtFishWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3957948329400497260
 RectTransform:
   m_ObjectHideFlags: 0
@@ -807,20 +820,3 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3791470974870843764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9129746931364402486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d1b8384ec7f9ae4d8170642d45d8b74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  catchBox: {fileID: 9129746931364402486}
-  FishSprite: {fileID: 5302650362122246380}
-  FishName: {fileID: 3073162872129587979}
-  FishDescription: {fileID: 6516997300184828364}
-  fishCollected: {fileID: 0}

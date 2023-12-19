@@ -22,7 +22,6 @@ public class Startfishing : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("HEYYYYYYYYYYYYYYYYYYY");
             fishingRodAnimation.SetTrigger("TriggerFishingRod");
             hookAnimation.SetTrigger("TriggerHook");
 
