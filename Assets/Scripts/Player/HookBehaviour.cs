@@ -34,7 +34,7 @@ public class HookBehaviour : MonoBehaviour
 
     void FixedUpdate() {
         rb.gravityScale = 1;
-        Debug.Log("Speedy Bubbles is emmiting : " + bubbleSpeed.isEmitting);
+        //Debug.Log("Speedy Bubbles is emmiting : " + bubbleSpeed.isEmitting);
         if(!isFinished) {
             transform.position += Vector3.down * 2 * Time.deltaTime;
 
