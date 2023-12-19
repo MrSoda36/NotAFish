@@ -2062,52 +2062,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1503099976876592783, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6666733598508566283, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
-      propertyPath: sparkle
-      value: 
-      objectReference: {fileID: 1931865025493332567}
     - target: {fileID: 6666733598508566283, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 1322451039}
+    - target: {fileID: 7148973368326691076, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7916175920958076765, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
       propertyPath: m_Name
       value: Hook
-      objectReference: {fileID: 0}
-    - target: {fileID: 7993583174666367272, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
-      propertyPath: m_Mass
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7993583174666367272, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
-      propertyPath: m_LinearDrag
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7993583174666367272, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
-      propertyPath: m_AngularDrag
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7993583174666367272, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
-      propertyPath: m_Constraints
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7993583174666367272, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
-      propertyPath: m_UseAutoMass
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
---- !u!198 &1931865025493332567 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7137725818416650885, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
-  m_PrefabInstance: {fileID: 1931865025493332566}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2720908891541909729
 PrefabInstance:
   m_ObjectHideFlags: 0
