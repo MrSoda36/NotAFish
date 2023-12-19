@@ -68,6 +68,7 @@ public class HookBehaviour : MonoBehaviour
         }
         if(collision.gameObject.tag == "Ground") {
             //Debug.Log("Ground hit");
+            isFinished = true;
             StartCoroutine(BubbleExplosion());
         }
         if(collision.gameObject.tag == "Wall") {
