@@ -4930,7 +4930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishName: DevFish
   speed: 5
-  particle: {fileID: 0}
+  particle: {fileID: 7038910276430344088}
 --- !u!70 &5160893572635813541
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
