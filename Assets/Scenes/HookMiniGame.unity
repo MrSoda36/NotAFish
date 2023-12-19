@@ -162,10 +162,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1308287098}
     m_Modifications:
-    - target: {fileID: 5003880727156833073, guid: d7e3d855e66694a4c889b1fb09da89a3, type: 3}
-      propertyPath: particle
-      value: 
-      objectReference: {fileID: 579792501}
     - target: {fileID: 7271323385633380353, guid: d7e3d855e66694a4c889b1fb09da89a3, type: 3}
       propertyPath: m_Name
       value: DevFish
@@ -218,11 +214,6 @@ PrefabInstance:
 --- !u!4 &579792500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9102355130381916324, guid: d7e3d855e66694a4c889b1fb09da89a3, type: 3}
-  m_PrefabInstance: {fileID: 579792499}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &579792501 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7038910276430344088, guid: d7e3d855e66694a4c889b1fb09da89a3, type: 3}
   m_PrefabInstance: {fileID: 579792499}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &580832878 stripped
@@ -830,15 +821,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5721170874660139673, guid: fa6f42a870ace7049aca77eca489dc57, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.18
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5721170874660139673, guid: fa6f42a870ace7049aca77eca489dc57, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.02
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5721170874660139673, guid: fa6f42a870ace7049aca77eca489dc57, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5721170874660139673, guid: fa6f42a870ace7049aca77eca489dc57, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2129,10 +2120,6 @@ PrefabInstance:
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 1322451039}
-    - target: {fileID: 7148973368326691076, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7916175920958076765, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
       propertyPath: m_Name
       value: Hook
