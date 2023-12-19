@@ -53,7 +53,7 @@ public class ObjectSpawner : MonoBehaviour
                 obstacleLine1[randomIndex].SetActive(true);
                 obstacleSpawned++;
             }
-            Debug.Log("Spawned all " + objectToSpawn + " obstacles in Line 1");
+            //Debug.Log("Spawned all " + objectToSpawn + " obstacles in Line 1");
         }
         if(lineIndex == 2) {
             int obstacleSpawned = 0;
@@ -65,7 +65,7 @@ public class ObjectSpawner : MonoBehaviour
                 obstacleLine2[randomIndex].SetActive(true);
                 obstacleSpawned++;
             }
-            Debug.Log("Spawned all " + objectToSpawn + " obstacles in Line 2");
+            //Debug.Log("Spawned all " + objectToSpawn + " obstacles in Line 2");
         }
 
              

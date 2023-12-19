@@ -10,13 +10,13 @@ public class FishCollected : MonoBehaviour
     public void CheckFishCollected(List<FishScriptableObjects> list) {
         if(list.Count == 2) { // Status : You collected enough items access to next level
             gameStatusUI.gameStatusPanel.SetActive(true);
-            gameStatusUI.statusText.text = "You collected enough items, you can now have access to the next level.";
+            gameStatusUI.statusText.text = "You have collected enough items! \n You can have an access to the next level now!";
 
 
         }
         if(list.Count == 0) { // Status : You collected all items 
             gameStatusUI.gameStatusPanel.SetActive(true);
-            gameStatusUI.statusText.text = "You collected all items here.";
+            gameStatusUI.statusText.text = "You have collected all items here, congrats!";
             gameStatusUI.goBackFishingButton.SetActive(false);
 
             FishingGameManager.Instance.FishesCollected();

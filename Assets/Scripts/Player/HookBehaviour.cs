@@ -63,7 +63,7 @@ public class HookBehaviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.tag == "Fish") {
             fish = collision.gameObject.GetComponent<FishBehaviour>();
-            Debug.Log("Fish caught: " + fish.fishName);
+            //Debug.Log("Fish caught: " + fish.fishName);
             isFinished = true;
         }
         if(collision.gameObject.tag == "Ground") {
