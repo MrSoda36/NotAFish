@@ -5332,10 +5332,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 90d4774fe4f1ee7449bbcaa9e29e1688, type: 2}
   - {fileID: 11400000, guid: d0e76bd22679f964fa2cb1275f831eca, type: 2}
   - {fileID: 11400000, guid: f7f8bc825b087c945b6837a4640be559, type: 2}
-  pondObjects:
   - {fileID: 11400000, guid: 5d9328b771852784d9bd755cd2f0e370, type: 2}
   - {fileID: 11400000, guid: f235a979b83c2c641986134dda69e29e, type: 2}
   - {fileID: 11400000, guid: 83cf9c5aa72453f41bac4e8e61ceb6ad, type: 2}
+  pondObjects: []
   caveRiverObjects: []
   lastZoneObjects: []
   beachObjectsClone: []

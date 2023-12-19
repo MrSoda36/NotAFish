@@ -57,16 +57,16 @@ public class FishingGameManager : MonoBehaviour
                 allBeachFishesCollected = true;
                 break;
 
-            case "Forest":
+            /* case "Forest":
                 allForestFishesCollected = true;
                 break;
 
             case "Cave":
                 allCaveFishesCollected = true;
-                break;
+                break; */
         }
 
-        if (allBeachFishesCollected && allForestFishesCollected && allCaveFishesCollected) {
+        if (allBeachFishesCollected /* && allForestFishesCollected && allCaveFishesCollected */) {
 
             allFishesCollected = true;
         }

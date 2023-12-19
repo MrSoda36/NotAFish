@@ -45,7 +45,7 @@ public class FishCaught : MonoBehaviour
                         fishCollected.CheckFishCollected(FishingObjectsList.Instance.beachObjects);
 
                         break;
-                    case "Forest":
+                    /* case "Forest":
                         index = Random.Range(0, FishingObjectsList.Instance.pondObjects.Count - 1);
                         PrintFishCaught(FishingObjectsList.Instance.pondObjects[index]);
 
@@ -60,7 +60,7 @@ public class FishCaught : MonoBehaviour
                         FishingObjectsList.Instance.caveRiverObjects.Remove(FishingObjectsList.Instance.caveRiverObjects[index]);
                         fishCollected.CheckFishCollected(FishingObjectsList.Instance.caveRiverObjects);
 
-                        break;
+                        break; */
                 }
         }
         // Sinon on utilise les listes secondaires pour continuer à jouer
@@ -71,7 +71,7 @@ public class FishCaught : MonoBehaviour
                     PrintFishCaught(FishingObjectsList.Instance.beachObjectsClone[index]);
 
                     break;
-                case "Forest":
+               /* case "Forest":
                     index = Random.Range(0, FishingObjectsList.Instance.pondObjectsClone.Count - 1);
                     PrintFishCaught(FishingObjectsList.Instance.pondObjectsClone[index]);
 
@@ -81,7 +81,7 @@ public class FishCaught : MonoBehaviour
                     index = Random.Range(0, FishingObjectsList.Instance.caveRiverObjectsClone.Count - 1);
                     PrintFishCaught(FishingObjectsList.Instance.caveRiverObjectsClone[index]);
 
-                    break;
+                    break; */
             }
         }
     } 
