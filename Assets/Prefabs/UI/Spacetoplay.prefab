@@ -4915,7 +4915,7 @@ GameObject:
   - component: {fileID: 2033618315265259784}
   - component: {fileID: 1334440396097523839}
   - component: {fileID: 962011055183036975}
-  - component: {fileID: 1985439483290618198}
+  - component: {fileID: 6911129255237536253}
   m_Layer: 5
   m_Name: Hamecon
   m_TagString: Untagged
@@ -5001,7 +5001,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1985439483290618198
+--- !u!114 &6911129255237536253
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5010,10 +5010,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2070355075352749070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01bfd9e63a216ba4594479f6c92c0319, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ae4a58a11fdeed4fa9ae4549c3f12a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubble: {fileID: 8313032808150979343}
+  startfishing: {fileID: 0}
 --- !u!1 &6568687245182612655
 GameObject:
   m_ObjectHideFlags: 0
