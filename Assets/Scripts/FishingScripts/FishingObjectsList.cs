@@ -24,6 +24,8 @@ public class FishingObjectsList : MonoBehaviour
     /// Objets pouvant être pêchés dans l'océan (première zone de pêche)
     /// </summary>
     public List<FishScriptableObjects> beachObjects = new List<FishScriptableObjects>();
+
+    /*
     /// <summary>
     /// Objets pouvant être pêchés dans l'étang (deuxième zone de pêche)
     /// </summary>
@@ -35,23 +37,23 @@ public class FishingObjectsList : MonoBehaviour
     /// <summary>
     /// Objets pouvant être pêchés dans la dernière zone 
     /// </summary>
-    public List<FishScriptableObjects> lastZoneObjects = new List<FishScriptableObjects>();
+    public List<FishScriptableObjects> lastZoneObjects = new List<FishScriptableObjects>(); */
 
 
 
     public List<FishScriptableObjects> beachObjectsClone;
 
-    public List<FishScriptableObjects> pondObjectsClone = new();
+    /* public List<FishScriptableObjects> pondObjectsClone = new();
 
-    public List<FishScriptableObjects> caveRiverObjectsClone = new();
+    public List<FishScriptableObjects> caveRiverObjectsClone = new(); */
 
     private void Start()
     {
         beachObjectsClone = new List<FishScriptableObjects>(beachObjects);
 
-        pondObjectsClone = pondObjects;
+       /* pondObjectsClone = pondObjects;
 
-        caveRiverObjectsClone = caveRiverObjects;
+        caveRiverObjectsClone = caveRiverObjects; */
     }
 
 }
