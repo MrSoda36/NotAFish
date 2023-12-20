@@ -14657,7 +14657,6 @@ MonoBehaviour:
   lineSpeed: {fileID: 1514970080179287519}
   audioSource: {fileID: 4985404217616144517}
   collisionClip: {fileID: 8300000, guid: 785333c406fd682449c9c4b14998e21c, type: 3}
-  caughtclip: {fileID: 8300000, guid: 5809fb6a3a2ec02478a1ecb47daeb7fc, type: 3}
 --- !u!60 &8350480836021063731
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -14769,7 +14768,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 785333c406fd682449c9c4b14998e21c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 2.06
   Loop: 0
