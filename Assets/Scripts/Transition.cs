@@ -26,7 +26,7 @@ public class Transition : MonoBehaviour
 
     IEnumerator LoadScene(string str)
     {
-        transition.SetTrigger("Start");
+        transition.SetTrigger("LeaveScene");
 
         yield return new WaitForSeconds(transitionTime);
 
