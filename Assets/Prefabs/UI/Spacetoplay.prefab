@@ -5014,6 +5014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startfishing: {fileID: 0}
+  transitionAnim: {fileID: 0}
 --- !u!1 &6568687245182612655
 GameObject:
   m_ObjectHideFlags: 0
@@ -5227,6 +5228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8741076089401991430}
   - component: {fileID: 2173104133205080389}
+  - component: {fileID: 1947246445607969839}
   m_Layer: 0
   m_Name: Plage
   m_TagString: Untagged
@@ -5301,3 +5303,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1947246445607969839
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8137501004407035588}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d803e38de79745046903f9726189aa44, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
