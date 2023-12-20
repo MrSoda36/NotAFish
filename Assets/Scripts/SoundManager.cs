@@ -38,6 +38,11 @@ public class SoundManager : MonoBehaviour
 
     private void Start() {
         _soundSource.loop = true;
+        Debug.Log("AudioSources status : ");
+        Debug.Log("AudioSource : " + _audioSource);
+        Debug.Log("MusicSource : " + _musicSource);
+        Debug.Log("VoiceSource : " + _voiceSource);
+        Debug.Log("SoundSource : " + _soundSource);
     }
 
     public void PlaySound(AudioClip audioClip)
