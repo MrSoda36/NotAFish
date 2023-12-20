@@ -14,7 +14,7 @@ public class HookBehaviour : MonoBehaviour
     [SerializeField] ParticleSystem bubble;
     [SerializeField] ParticleSystem sparkle;
     [SerializeField] ParticleSystem bubbleExplosion;
-    [SerializeField] ParticleSystem bubbleSpeed;        // Fonctionne que à l'arrêt
+    [SerializeField] ParticleSystem bubbleSpeed;
     [SerializeField] ParticleSystem lineSpeed;
 
     Rigidbody2D rb;
@@ -28,13 +28,12 @@ public class HookBehaviour : MonoBehaviour
 
         sparkle.Stop();
         bubbleExplosion.Stop();
-        bubbleSpeed.Stop();
-        lineSpeed.Stop();
+        bubbleSpeed.gameObject.SetActive(false);
+        lineSpeed.gameObject.SetActive(false);
     }
 
     void FixedUpdate() {
         rb.gravityScale = 1;
-        //Debug.Log("Speedy Bubbles is emmiting : " + bubbleSpeed.isEmitting);
         if(!isFinished) {
             transform.position += Vector3.down * 2 * Time.deltaTime;
 
@@ -51,13 +50,15 @@ public class HookBehaviour : MonoBehaviour
 
             if (Input.GetKey(KeyCode.DownArrow)) {
                 transform.position += Vector3.down * speed * Time.deltaTime;
-                Debug.Log("Spid");
-                StartCoroutine(StartSpeedEffects());
+                bubble.Stop();
+                bubbleSpeed.gameObject.SetActive(true);
+                lineSpeed.gameObject.SetActive(true);
             }
 
             if(Input.GetKeyUp(KeyCode.DownArrow)) {
-                Debug.Log("Stop");
-                StartCoroutine(StopSpeedEffects());
+                bubble.Play();
+                bubbleSpeed.gameObject.SetActive(false);
+                lineSpeed.gameObject.SetActive(false);
             }
 
         }
@@ -80,20 +81,7 @@ public class HookBehaviour : MonoBehaviour
         }
     }
 
-    IEnumerator StartSpeedEffects() {
-        yield return new WaitForSeconds(0.5f);
-        bubble.Stop();
-        bubbleSpeed.Play();
-        lineSpeed.Play();
-        yield return null;
-    }
 
-    IEnumerator StopSpeedEffects() {
-        bubbleSpeed.Stop();
-        lineSpeed.Stop();
-        bubble.Play();
-        yield return null;
-    }
 
     IEnumerator BubbleExplosion() {
         bubbleExplosion.Play();
