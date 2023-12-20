@@ -17,6 +17,10 @@ public class HookBehaviour : MonoBehaviour
     [SerializeField] ParticleSystem bubbleSpeed;
     [SerializeField] ParticleSystem lineSpeed;
 
+    [Header("Audio")]
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip collisionClip;
+
     Rigidbody2D rb;
 
     bool isFinished = false;
@@ -73,11 +77,13 @@ public class HookBehaviour : MonoBehaviour
         if(collision.gameObject.tag == "Ground") {
             //Debug.Log("Ground hit");
             isFinished = true;
+            audioSource.Play();
             StartCoroutine(BubbleExplosion());
         }
         if(collision.gameObject.tag == "Wall") {
             //Debug.Log("Wall hit");
             sparkle.Play();
+            audioSource.Play();
         }
     }
 
