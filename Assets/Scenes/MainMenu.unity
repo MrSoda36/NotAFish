@@ -5058,6 +5058,7 @@ GameObject:
   - component: {fileID: 860112990}
   - component: {fileID: 860112989}
   - component: {fileID: 860112988}
+  - component: {fileID: 860112992}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -5119,7 +5120,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -5191,6 +5192,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860112986}
   m_CullTransparentMesh: 1
+--- !u!114 &860112992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860112986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 815d6abcd1f746541af001fa389153cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1316406733
 GameObject:
   m_ObjectHideFlags: 0
@@ -5335,12 +5348,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d9328b771852784d9bd755cd2f0e370, type: 2}
   - {fileID: 11400000, guid: f235a979b83c2c641986134dda69e29e, type: 2}
   - {fileID: 11400000, guid: 83cf9c5aa72453f41bac4e8e61ceb6ad, type: 2}
-  pondObjects: []
-  caveRiverObjects: []
-  lastZoneObjects: []
   beachObjectsClone: []
-  pondObjectsClone: []
-  caveRiverObjectsClone: []
 --- !u!1 &1587656614
 GameObject:
   m_ObjectHideFlags: 0

@@ -85,6 +85,7 @@ public class HookBehaviour : MonoBehaviour
 
     IEnumerator BubbleExplosion() {
         bubbleExplosion.Play();
+        sparkle.Play();
         yield return new WaitForSeconds(1f);
         FishingGameManager.Instance.FishingGameLost();
     }
