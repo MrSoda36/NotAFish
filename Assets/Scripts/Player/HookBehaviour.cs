@@ -77,13 +77,13 @@ public class HookBehaviour : MonoBehaviour
         if(collision.gameObject.tag == "Ground") {
             //Debug.Log("Ground hit");
             isFinished = true;
-            audioSource.Play();
+            SoundManager.SoundInstance.PlaySound(collisionClip);
             StartCoroutine(BubbleExplosion());
         }
         if(collision.gameObject.tag == "Wall") {
             //Debug.Log("Wall hit");
             sparkle.Play();
-            audioSource.Play();
+            SoundManager.SoundInstance.PlaySound(collisionClip);
         }
     }
 
