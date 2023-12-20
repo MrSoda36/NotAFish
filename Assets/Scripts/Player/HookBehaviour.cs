@@ -18,7 +18,6 @@ public class HookBehaviour : MonoBehaviour
     [SerializeField] ParticleSystem lineSpeed;
 
     [Header("Audio")]
-    [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip collisionClip;
 
     Rigidbody2D rb;

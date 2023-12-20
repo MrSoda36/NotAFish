@@ -2169,6 +2169,10 @@ PrefabInstance:
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 1322451039}
+    - target: {fileID: 6666733598508566283, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7916175920958076765, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
       propertyPath: m_Name
       value: Hook
@@ -2247,10 +2251,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
-    - target: {fileID: 5626412275091102804, guid: 1bbef22ae39c73942948ea247e9b6f1d, type: 3}
-      propertyPath: _audioSource
-      value: 
-      objectReference: {fileID: 4985404217616144517, guid: 88a73223b50cd574d8fa292dbf2ac3f4, type: 3}
     - target: {fileID: 7180195821902327497, guid: 1bbef22ae39c73942948ea247e9b6f1d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1894.603
