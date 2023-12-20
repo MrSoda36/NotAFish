@@ -14,7 +14,7 @@ public class HookBehaviour : MonoBehaviour
     [SerializeField] ParticleSystem bubble;
     [SerializeField] ParticleSystem sparkle;
     [SerializeField] ParticleSystem bubbleExplosion;
-    [SerializeField] ParticleSystem bubbleSpeed;
+    [SerializeField] ParticleSystem bubbleSpeed;        // Fonctionne que à l'arrêt
     [SerializeField] ParticleSystem lineSpeed;
 
     Rigidbody2D rb;
@@ -47,16 +47,19 @@ public class HookBehaviour : MonoBehaviour
             if (Input.GetKey(KeyCode.UpArrow)) {
                 transform.position += Vector3.up * 1 * Time.deltaTime;
             }
+
+
             if (Input.GetKey(KeyCode.DownArrow)) {
                 transform.position += Vector3.down * speed * Time.deltaTime;
-                bubbleSpeed.Play();
-                lineSpeed.Play();
+                Debug.Log("Spid");
+                StartCoroutine(StartSpeedEffects());
             }
 
             if(Input.GetKeyUp(KeyCode.DownArrow)) {
-                bubbleSpeed.Stop();
-                lineSpeed.Stop();;
+                Debug.Log("Stop");
+                StartCoroutine(StopSpeedEffects());
             }
+
         }
     }
 
@@ -75,6 +78,21 @@ public class HookBehaviour : MonoBehaviour
             //Debug.Log("Wall hit");
             sparkle.Play();
         }
+    }
+
+    IEnumerator StartSpeedEffects() {
+        yield return new WaitForSeconds(0.5f);
+        bubble.Stop();
+        bubbleSpeed.Play();
+        lineSpeed.Play();
+        yield return null;
+    }
+
+    IEnumerator StopSpeedEffects() {
+        bubbleSpeed.Stop();
+        lineSpeed.Stop();
+        bubble.Play();
+        yield return null;
     }
 
     IEnumerator BubbleExplosion() {
