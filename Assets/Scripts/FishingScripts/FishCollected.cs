@@ -17,6 +17,7 @@ public class FishCollected : MonoBehaviour
         if(list.Count == 0) { // Status : You collected all items 
             gameStatusUI.gameStatusPanel.SetActive(true);
             gameStatusUI.statusText.text = "You have collected all items here, congrats!";
+            gameStatusUI.goBackFishingButton.SetActive(false);
 
             FishingGameManager.Instance.FishesCollected();
         }

@@ -25,8 +25,6 @@ public class FishingGameManager : MonoBehaviour
     public bool isFishCaught;
 
     public bool allBeachFishesCollected;
-    public bool allForestFishesCollected;
-    public bool allCaveFishesCollected;
 
     public bool allFishesCollected;
 
@@ -52,21 +50,10 @@ public class FishingGameManager : MonoBehaviour
     }
 
     public void FishesCollected() {
-        switch (fishingSceneName) {
-            case "Beach":
-                allBeachFishesCollected = true;
-                break;
+        allBeachFishesCollected = true;
 
-            /* case "Forest":
-                allForestFishesCollected = true;
-                break;
-
-            case "Cave":
-                allCaveFishesCollected = true;
-                break; */
-        }
-
-        if (allBeachFishesCollected /* && allForestFishesCollected && allCaveFishesCollected */) {
+        // Pour future compatibilité pour de futurs niveaux
+        if (allBeachFishesCollected) {
 
             allFishesCollected = true;
         }
