@@ -11,6 +11,9 @@ public class FishBehaviour : MonoBehaviour
     [Header("Audio")]
     [SerializeField] AudioClip caughtClip;
 
+    [Header("Start Animation")]
+    [SerializeField] Animator leaveSceneAnim;
+
     uint direction = 0;
 
     private void Start() {
@@ -47,7 +50,8 @@ public class FishBehaviour : MonoBehaviour
     IEnumerator FishCatched() {
         speed = 0;
         particle.Play();
-        yield return new WaitForSeconds(0.5f);
+        leaveSceneAnim.SetTrigger("LeaveScene");
+        yield return new WaitForSeconds(1.2f);
         Destroy(this.gameObject);
         FishingGameManager.Instance.FishingGameWon();
     }
