@@ -8,6 +8,8 @@ public class Startfishing : MonoBehaviour
     public Animator fishingRodAnimation;
     public Animator hookAnimation;
 
+    public AudioClip slashClip;
+
     public void Start()
     {
         fishingRodAnimation.GetComponent<Animation>();
@@ -24,6 +26,7 @@ public class Startfishing : MonoBehaviour
         {
             fishingRodAnimation.SetTrigger("TriggerFishingRod");
             hookAnimation.SetTrigger("TriggerHook");
+            SoundManager.SoundInstance.PlaySound(slashClip);
         }
     }
 }

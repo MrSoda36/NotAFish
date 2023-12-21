@@ -1267,6 +1267,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 71c0ea3d4e5255e4da41a58cb9c8e643, type: 3}
     - target: {fileID: 6911129255237536253, guid: 2b05500855f9e7642bcb3d625c0931d0, type: 3}
+      propertyPath: slashClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d3d4b5b250b22ac4e9ee2c82cf6dc67d, type: 3}
+    - target: {fileID: 6911129255237536253, guid: 2b05500855f9e7642bcb3d625c0931d0, type: 3}
       propertyPath: splashClip
       value: 
       objectReference: {fileID: 8300000, guid: c99a5de185ead6847a7266c04e230728, type: 3}
@@ -1570,6 +1574,7 @@ MonoBehaviour:
   bubble: {fileID: 1720232008}
   fishingRodAnimation: {fileID: 1598232124}
   hookAnimation: {fileID: 924008051}
+  slashClip: {fileID: 8300000, guid: d3d4b5b250b22ac4e9ee2c82cf6dc67d, type: 3}
 --- !u!4 &1880028269
 Transform:
   m_ObjectHideFlags: 0
