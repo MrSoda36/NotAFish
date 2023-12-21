@@ -15,16 +15,6 @@ public class ObjectSpawner : MonoBehaviour
         SpawnObstacleLines(2);
     }
 
-    void Update() {
-        if (Input.GetKeyUp(KeyCode.T)) {
-            SpawnObstacleLines(1);
-            SpawnObstacleLines(2);
-        }
-        if(Input.GetKeyUp(KeyCode.Y)) {
-            DesactivateAllObstacles();
-        }
-    }
-
     void SetupDifficulty() {
         
         switch (FishingGameManager.Instance.fishingSceneName)
