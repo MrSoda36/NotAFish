@@ -7,11 +7,17 @@ public class FishCaught : MonoBehaviour
     public GameObject catchBox;
     [SerializeField] AudioClip applauseClip;
 
+    [Header("Fish caught info")]
     public GameObject FishSprite;
     public TextMeshProUGUI FishName;
     public TextMeshProUGUI FishDescription;
 
     public FishCollected fishCollected;
+
+    [Header("Stars")]
+    public GameObject starOne;
+    public GameObject starTwo;
+    public GameObject starThree;
 
     public void Start()
     {
@@ -30,6 +36,32 @@ public class FishCaught : MonoBehaviour
         FishSprite.GetComponent<Image>().sprite = fishScriptableObjects.itemSprite;
         FishName.text = fishScriptableObjects.itemName;
         FishDescription.text = fishScriptableObjects.itemDescription;
+        
+        if(FishingGameManager.Instance.wallHit == 0) {
+            //Debug.Log("3 Star");
+            starOne.SetActive(true);
+            starTwo.SetActive(true);
+            starThree.SetActive(true);
+        }
+        else if(FishingGameManager.Instance.wallHit == 1) {
+            //Debug.Log("2 Star");
+            starOne.SetActive(true);
+            starTwo.SetActive(true);
+            starThree.SetActive(false);
+        }
+        else if (FishingGameManager.Instance.wallHit == 2){
+            //Debug.Log("1 Star");
+            starOne.SetActive(true);
+            starTwo.SetActive(false);
+            starThree.SetActive(false);
+        }
+        else if (FishingGameManager.Instance.wallHit >= 3) {
+            //Debug.Log("0 Star");
+            starOne.SetActive(false);
+            starTwo.SetActive(false);
+            starThree.SetActive(false);
+        }
+
     }
 
     public void GetFish() {

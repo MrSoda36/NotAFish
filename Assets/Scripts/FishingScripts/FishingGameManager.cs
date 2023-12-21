@@ -22,10 +22,10 @@ public class FishingGameManager : MonoBehaviour
 
 
     public string fishingSceneName;
+    public int wallHit;
+
     public bool isFishCaught;
-
     public bool allBeachFishesCollected;
-
     public bool allFishesCollected;
 
 
@@ -34,6 +34,7 @@ public class FishingGameManager : MonoBehaviour
 
         fishingSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("HookMiniGame");
+        wallHit = 0;
     }
 
     // jeu terminé avec Poisson attrapé

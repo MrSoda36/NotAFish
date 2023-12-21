@@ -94,6 +94,8 @@ public class HookBehaviour : MonoBehaviour
             //Debug.Log("Wall hit");
             sparkle.Play();
             SoundManager.SoundInstance.PlaySound(collisionClip);
+            FishingGameManager.Instance.wallHit++;
+            // Debug.Log(FishingGameManager.Instance.wallHit);
         }
     }
 
