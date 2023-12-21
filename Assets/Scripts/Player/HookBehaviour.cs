@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class HookBehaviour : MonoBehaviour
@@ -25,6 +23,13 @@ public class HookBehaviour : MonoBehaviour
 
     bool isFinished = false;
 
+    ParticleSystem.MainModule bubbleMain;
+
+    private void Awake() {
+        bubbleMain = bubble.main;
+        bubbleMain.prewarm = true;
+    }
+
     private void Start() {
         this.gameObject.transform.position = startPoint.position;
         rb = this.gameObject.GetComponent<Rigidbody2D>();
@@ -32,16 +37,23 @@ public class HookBehaviour : MonoBehaviour
 
         SoundManager.SoundInstance.PlayAmbiantSound(bubblingLoopClip);
 
+        bubble.Play();
         sparkle.Stop();
         bubbleExplosion.Stop();
         bubbleSpeed.gameObject.SetActive(false);
         lineSpeed.gameObject.SetActive(false);
+
+        bubbleMain.prewarm = false;
     }
 
     void FixedUpdate() {
+
         rb.gravityScale = 1;
+        bubble.Play();
+
         if (!isFinished) {
             transform.position += Vector3.down * 2 * Time.deltaTime;
+            bubble.Play();
 
             if (Input.GetKey(KeyCode.LeftArrow)) {
                 transform.position += Vector3.left * speed * Time.deltaTime;
@@ -53,23 +65,21 @@ public class HookBehaviour : MonoBehaviour
                 transform.position += Vector3.up * 1 * Time.deltaTime;
             }
 
-
             if (Input.GetKey(KeyCode.DownArrow)) {
                 transform.position += Vector3.down * speed * Time.deltaTime;
+
                 bubble.Stop();
                 bubbleSpeed.gameObject.SetActive(true);
                 lineSpeed.gameObject.SetActive(true);
-                Debug.Log("All Particles on");
             }
-
-            if(Input.GetKeyUp(KeyCode.DownArrow)) {
+            else {
                 bubble.Play();
                 bubbleSpeed.gameObject.SetActive(false);
                 lineSpeed.gameObject.SetActive(false);
-                Debug.Log("All Particles off");
             }
 
         }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
