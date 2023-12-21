@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HookMiniGame.unity
     guid: 9c79f4da69b86ec4b8d2dec1bb08107b
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 4d4b355156decec419a9d024a0f4ee8f
   m_configObjects: {}
