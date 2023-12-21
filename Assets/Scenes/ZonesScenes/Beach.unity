@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3422528311484455740, guid: 1bbef22ae39c73942948ea247e9b6f1d, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 7180195821902327497, guid: 1bbef22ae39c73942948ea247e9b6f1d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1894.603
@@ -174,6 +178,14 @@ PrefabInstance:
     - target: {fileID: 7180195821902327497, guid: 1bbef22ae39c73942948ea247e9b6f1d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929032368336111297, guid: 1bbef22ae39c73942948ea247e9b6f1d, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929032368336111297, guid: 1bbef22ae39c73942948ea247e9b6f1d, type: 3}
+      propertyPath: m_Volume
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -309,6 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catchBox: {fileID: 3874195499118913064}
+  applauseClip: {fileID: 8300000, guid: 000d6f3b9cb6f5842b7481fa50bf25b8, type: 3}
   FishSprite: {fileID: 3874195499118913067}
   FishName: {fileID: 3874195499118913066}
   FishDescription: {fileID: 3874195499118913065}
@@ -535,7 +548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2048644068577517397, guid: 66fa0c087f89db24fbd575d4b47c60e6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2891111737225783771, guid: 66fa0c087f89db24fbd575d4b47c60e6, type: 3}
       propertyPath: m_SizeDelta.x
@@ -838,6 +851,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6911129255237536253, guid: 2b05500855f9e7642bcb3d625c0931d0, type: 3}
+      propertyPath: pouicClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 71c0ea3d4e5255e4da41a58cb9c8e643, type: 3}
+    - target: {fileID: 6911129255237536253, guid: 2b05500855f9e7642bcb3d625c0931d0, type: 3}
+      propertyPath: splashClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c99a5de185ead6847a7266c04e230728, type: 3}
+    - target: {fileID: 6911129255237536253, guid: 2b05500855f9e7642bcb3d625c0931d0, type: 3}
       propertyPath: startfishing
       value: 
       objectReference: {fileID: 1880028268}
@@ -845,6 +866,10 @@ PrefabInstance:
       propertyPath: transitionAnim
       value: 
       objectReference: {fileID: 1923387313}
+    - target: {fileID: 6911129255237536253, guid: 2b05500855f9e7642bcb3d625c0931d0, type: 3}
+      propertyPath: ambientWavesClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d66dd7e74c53914ea70b9b292832b17, type: 3}
     - target: {fileID: 7252962897293343389, guid: 2b05500855f9e7642bcb3d625c0931d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1329,7 +1354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9129746931364402486, guid: 5dead11cc6d551c4fb086ede985a3afe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -8,6 +8,9 @@ public class FishBehaviour : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] ParticleSystem particle;
 
+    [Header("Audio")]
+    [SerializeField] AudioClip caughtClip;
+
     uint direction = 0;
 
     private void Start() {
@@ -36,6 +39,7 @@ public class FishBehaviour : MonoBehaviour
         }
 
         if(collision.gameObject.tag == "Player") {
+            SoundManager.SoundInstance.PlaySound(caughtClip);
             StartCoroutine(FishCatched());
         }
     }

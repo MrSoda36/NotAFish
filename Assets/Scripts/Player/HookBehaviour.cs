@@ -19,6 +19,7 @@ public class HookBehaviour : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] AudioClip collisionClip;
+    [SerializeField] AudioClip bubblingLoopClip;
 
     Rigidbody2D rb;
 
@@ -29,6 +30,8 @@ public class HookBehaviour : MonoBehaviour
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
 
+        SoundManager.SoundInstance.PlayAmbiantSound(bubblingLoopClip);
+
         sparkle.Stop();
         bubbleExplosion.Stop();
         bubbleSpeed.gameObject.SetActive(false);
@@ -37,7 +40,7 @@ public class HookBehaviour : MonoBehaviour
 
     void FixedUpdate() {
         rb.gravityScale = 1;
-        if(!isFinished) {
+        if (!isFinished) {
             transform.position += Vector3.down * 2 * Time.deltaTime;
 
             if (Input.GetKey(KeyCode.LeftArrow)) {

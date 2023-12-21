@@ -24,7 +24,6 @@ public class Startfishing : MonoBehaviour
         {
             fishingRodAnimation.SetTrigger("TriggerFishingRod");
             hookAnimation.SetTrigger("TriggerHook");
-
         }
     }
 }

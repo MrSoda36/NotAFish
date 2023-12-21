@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class FishCaught : MonoBehaviour
 {
     public GameObject catchBox;
+    [SerializeField] AudioClip applauseClip;
 
     public GameObject FishSprite;
     public TextMeshProUGUI FishName;
@@ -24,6 +25,7 @@ public class FishCaught : MonoBehaviour
     public void PrintFishCaught(FishScriptableObjects fishScriptableObjects) {
 
         catchBox.SetActive(true);
+        SoundManager.SoundInstance.PlaySound(applauseClip);
 
         FishSprite.GetComponent<Image>().sprite = fishScriptableObjects.itemSprite;
         FishName.text = fishScriptableObjects.itemName;
