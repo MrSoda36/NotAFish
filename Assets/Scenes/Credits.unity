@@ -5248,7 +5248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "D\xE9veloppeurs : "
+  m_text: 'Developpers : '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5466,7 +5466,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Cr\xE9dits\n\n"
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5607,7 +5607,7 @@ MonoBehaviour:
     Michel
     Baradari
 
-    
+
 
     Pouic dans l''eau :
 
@@ -5616,7 +5616,7 @@ MonoBehaviour:
     (poit
     by Pixabay)
 
-    
+
 
     Collision :
 
@@ -5625,7 +5625,7 @@ MonoBehaviour:
     (Cinematic
     Boom by Pixabay)
 
-    
+
 
     Get item :
 
@@ -5634,17 +5634,16 @@ MonoBehaviour:
     (Take
     Item Sound Effect by zennnsounds)
 
-    
 
-    Gentle-ocean-waves-fizzing-bubbles
-    :
+
+    Gentle-ocean-waves-fizzing-bubbles :
 
     https://pixabay.com/sound-effects/gentle-ocean-waves-fizzing-bubbles-64980/
 
     (Gentle
     ocean waves fizzing bubbles by Pixabay)
 
-    
+
 
     Bubbling-loop :
 
@@ -5653,7 +5652,7 @@ MonoBehaviour:
     (Bubbling
     Loop 1 by Pixabay)
 
-    
+
 
     Slash :
 
@@ -5662,14 +5661,13 @@ MonoBehaviour:
     (Slash
     by 666HeroHero)
 
-    
+
 
     Splash :
 
     opengameart.org
 
-    (Splash by
-    erza)'
+    (Splash by erza)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6288,7 +6286,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Graphistes : '
+  m_text: 'Artists : '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11354,7 +11352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sources des sons : '
+  m_text: 'Sound Sources : '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -15,16 +15,6 @@ public class ObjectSpawner : MonoBehaviour
         SpawnObstacleLines(2);
     }
 
-    void Update() {
-        if (Input.GetKeyUp(KeyCode.T)) {
-            SpawnObstacleLines(1);
-            SpawnObstacleLines(2);
-        }
-        if(Input.GetKeyUp(KeyCode.Y)) {
-            DesactivateAllObstacles();
-        }
-    }
-
     void SetupDifficulty() {
         
         switch (FishingGameManager.Instance.fishingSceneName)
@@ -52,6 +42,9 @@ public class ObjectSpawner : MonoBehaviour
                 }
                 obstacleLine1[randomIndex].SetActive(true);
                 obstacleSpawned++;
+                if(Random.Range(0, 2) == 0) {
+                    obstacleSpawned++;
+                }
             }
             //Debug.Log("Spawned all " + objectToSpawn + " obstacles in Line 1");
         }
