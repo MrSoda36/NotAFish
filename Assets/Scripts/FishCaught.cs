@@ -33,56 +33,16 @@ public class FishCaught : MonoBehaviour
     public void GetFish() {
 
         int index = 0;
-        
-        // Si les niveaux n'ont pas été complétés au moins une fois :
-        if (!FishingGameManager.Instance.allFishesCollected) {
-                switch (FishingGameManager.Instance.fishingSceneName) {
-                    case "Beach":
-                        index = Random.Range(0, FishingObjectsList.Instance.beachObjects.Count - 1);
-                        PrintFishCaught(FishingObjectsList.Instance.beachObjects[index]);
+        // switch pour future compatiblité de futurs niveaux
+        switch (FishingGameManager.Instance.fishingSceneName) {
+            case "Beach":
+                index = Random.Range(0, FishingObjectsList.Instance.beachObjects.Count - 1);
+                PrintFishCaught(FishingObjectsList.Instance.beachObjects[index]);
 
-                        FishingObjectsList.Instance.beachObjects.Remove(FishingObjectsList.Instance.beachObjects[index]);
-                        fishCollected.CheckFishCollected(FishingObjectsList.Instance.beachObjects);
+                FishingObjectsList.Instance.beachObjects.Remove(FishingObjectsList.Instance.beachObjects[index]);
+                fishCollected.CheckFishCollected(FishingObjectsList.Instance.beachObjects);
+            break;
 
-                        break;
-                    /* case "Forest":
-                        index = Random.Range(0, FishingObjectsList.Instance.pondObjects.Count - 1);
-                        PrintFishCaught(FishingObjectsList.Instance.pondObjects[index]);
-
-                        FishingObjectsList.Instance.pondObjects.Remove(FishingObjectsList.Instance.pondObjects[index]);
-                        fishCollected.CheckFishCollected(FishingObjectsList.Instance.pondObjects);
-
-                        break;
-                    case "Cave":
-                        index = Random.Range(0, FishingObjectsList.Instance.caveRiverObjects.Count - 1);
-                        PrintFishCaught(FishingObjectsList.Instance.caveRiverObjects[index]);
-
-                        FishingObjectsList.Instance.caveRiverObjects.Remove(FishingObjectsList.Instance.caveRiverObjects[index]);
-                        fishCollected.CheckFishCollected(FishingObjectsList.Instance.caveRiverObjects);
-
-                        break; */
-                }
-        }
-        // Sinon on utilise les listes secondaires pour continuer à jouer
-        else {
-            switch (FishingGameManager.Instance.fishingSceneName) {
-                case "Beach":
-                    index = Random.Range(0, FishingObjectsList.Instance.beachObjectsClone.Count - 1);
-                    PrintFishCaught(FishingObjectsList.Instance.beachObjectsClone[index]);
-
-                    break;
-               /* case "Forest":
-                    index = Random.Range(0, FishingObjectsList.Instance.pondObjectsClone.Count - 1);
-                    PrintFishCaught(FishingObjectsList.Instance.pondObjectsClone[index]);
-
-
-                    break;
-                case "Cave":
-                    index = Random.Range(0, FishingObjectsList.Instance.caveRiverObjectsClone.Count - 1);
-                    PrintFishCaught(FishingObjectsList.Instance.caveRiverObjectsClone[index]);
-
-                    break; */
-            }
         }
     } 
 }

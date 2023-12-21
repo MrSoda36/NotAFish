@@ -26,7 +26,7 @@ public class SoundManager : MonoBehaviour
         else
         {
             _soundInstance = this;
-            Debug.Log("Instance created");
+            //Debug.Log("Instance created");
         }
     }
 
@@ -38,11 +38,6 @@ public class SoundManager : MonoBehaviour
 
     private void Start() {
         _soundSource.loop = true;
-        Debug.Log("AudioSources status : ");
-        Debug.Log("AudioSource : " + _audioSource);
-        Debug.Log("MusicSource : " + _musicSource);
-        Debug.Log("VoiceSource : " + _voiceSource);
-        Debug.Log("SoundSource : " + _soundSource);
     }
 
     public void PlaySound(AudioClip audioClip)
@@ -54,20 +49,27 @@ public class SoundManager : MonoBehaviour
         _audioSource.Stop();
     }
 
-    public void PlayMusic(AudioClip firstMusic, AudioClip music)
-    {
-        if(!_musicSource.isPlaying) {
-            _musicSource.clip = firstMusic;
-            _musicSource.Play();
-        }
-        
-        StartCoroutine(AfterPlayed(_musicSource, () => {
-            _musicSource.clip = music;
-            _musicSource.loop = true;
-            _musicSource.Play();
-        }));
-        
+    public void PlayMusic(AudioClip music) {
+        _musicSource.clip = music;
+        _musicSource.loop = true;
+        _musicSource.Play();
     }
+
+    // Was made for "Melatonin Enigma" music
+    //public void PlayMusic(AudioClip firstMusic, AudioClip music)
+    //{
+    //    if(!_musicSource.isPlaying) {
+    //        _musicSource.clip = firstMusic;
+    //        _musicSource.Play();
+    //    }
+        
+    //    StartCoroutine(AfterPlayed(_musicSource, () => {
+    //        _musicSource.clip = music;
+    //        _musicSource.loop = true;
+    //        _musicSource.Play();
+    //    }));
+        
+    //}
 
     IEnumerator AfterPlayed(AudioSource audioSource, System.Action action) {
         yield return new WaitWhile(() => audioSource.isPlaying);

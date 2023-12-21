@@ -56,12 +56,14 @@ public class HookBehaviour : MonoBehaviour
                 bubble.Stop();
                 bubbleSpeed.gameObject.SetActive(true);
                 lineSpeed.gameObject.SetActive(true);
+                Debug.Log("All Particles on");
             }
 
             if(Input.GetKeyUp(KeyCode.DownArrow)) {
                 bubble.Play();
                 bubbleSpeed.gameObject.SetActive(false);
                 lineSpeed.gameObject.SetActive(false);
+                Debug.Log("All Particles off");
             }
 
         }
