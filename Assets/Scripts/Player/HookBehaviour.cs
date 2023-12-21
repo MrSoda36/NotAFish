@@ -8,6 +8,9 @@ public class HookBehaviour : MonoBehaviour
     [SerializeField] FishBehaviour fish;
     [SerializeField] Transform startPoint;
 
+    [Header("Start Animation")]
+    [SerializeField] Animator leaveSceneAnim;
+
     [Header("Particles")]
     [SerializeField] ParticleSystem bubble;
     [SerializeField] ParticleSystem sparkle;
@@ -97,6 +100,7 @@ public class HookBehaviour : MonoBehaviour
             FishingGameManager.Instance.wallHit++;
             // Debug.Log(FishingGameManager.Instance.wallHit);
         }
+
     }
 
 
@@ -104,7 +108,9 @@ public class HookBehaviour : MonoBehaviour
     IEnumerator BubbleExplosion() {
         bubbleExplosion.Play();
         sparkle.Play();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.7f);
+        leaveSceneAnim.SetTrigger("LeaveScene");
+        yield return new WaitForSeconds(1.3f);
         FishingGameManager.Instance.FishingGameLost();
     }
 

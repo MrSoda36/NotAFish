@@ -22,7 +22,7 @@ public class FishingGameManager : MonoBehaviour
 
 
     public string fishingSceneName;
-    public int wallHit;
+    public uint wallHit;
 
     public bool isFishCaught;
     public bool allBeachFishesCollected;
