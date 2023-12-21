@@ -49,11 +49,9 @@ public class HookBehaviour : MonoBehaviour
     void FixedUpdate() {
 
         rb.gravityScale = 1;
-        bubble.Play();
 
         if (!isFinished) {
             transform.position += Vector3.down * 2 * Time.deltaTime;
-            bubble.Play();
 
             if (Input.GetKey(KeyCode.LeftArrow)) {
                 transform.position += Vector3.left * speed * Time.deltaTime;
@@ -68,12 +66,10 @@ public class HookBehaviour : MonoBehaviour
             if (Input.GetKey(KeyCode.DownArrow)) {
                 transform.position += Vector3.down * speed * Time.deltaTime;
 
-                bubble.Stop();
                 bubbleSpeed.gameObject.SetActive(true);
                 lineSpeed.gameObject.SetActive(true);
             }
             else {
-                bubble.Play();
                 bubbleSpeed.gameObject.SetActive(false);
                 lineSpeed.gameObject.SetActive(false);
             }
