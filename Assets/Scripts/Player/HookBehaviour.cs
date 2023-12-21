@@ -21,7 +21,6 @@ public class HookBehaviour : MonoBehaviour
     Rigidbody2D rb;
 
     bool isFinished = false;
-    bool isSpeeding = false;
 
     ParticleSystem.MainModule bubbleMain;
 
@@ -69,32 +68,15 @@ public class HookBehaviour : MonoBehaviour
                 bubble.Stop();
                 bubbleSpeed.gameObject.SetActive(true);
                 lineSpeed.gameObject.SetActive(true);
-                //isSpeeding = true;
             }
             else {
                 bubble.Play();
                 bubbleSpeed.gameObject.SetActive(false);
                 lineSpeed.gameObject.SetActive(false);
-                //isSpeeding = false;
             }
 
         }
 
-        Debug.Log("Bubble is emitting : " + bubble.isEmitting);
-    }
-
-    IEnumerator StartSpeedEffects() {
-        bubbleSpeed.gameObject.SetActive(true);
-        lineSpeed.gameObject.SetActive(true);
-        Debug.Log("All Particles on");
-        yield return null;    
-    }
-
-    IEnumerator StopSpeedEffects() {
-        bubbleSpeed.gameObject.SetActive(false);
-        lineSpeed.gameObject.SetActive(false);
-        Debug.Log("All Particles off");
-        yield return null;
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
