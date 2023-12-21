@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 124177865}
   - component: {fileID: 124177864}
   - component: {fileID: 124177863}
-  - component: {fileID: 124177862}
+  - component: {fileID: 124177866}
   m_Layer: 5
   m_Name: Quitgame
   m_TagString: Untagged
@@ -162,19 +162,6 @@ RectTransform:
   m_AnchoredPosition: {x: -800, y: 492}
   m_SizeDelta: {x: 190, y: 455}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &124177862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124177860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42a8cebbd050b394697f047e2a25cee3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 
 --- !u!114 &124177863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,9 +206,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 124177862}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 124177866}
+        m_TargetAssemblyTypeName: QuitGame, Assembly-CSharp
+        m_MethodName: QuitGameOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -269,6 +256,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124177860}
   m_CullTransparentMesh: 1
+--- !u!114 &124177866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124177860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e8a213b7bc621e4bb3f23273e6239ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &163665454
 GameObject:
   m_ObjectHideFlags: 0
@@ -5639,7 +5638,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d9328b771852784d9bd755cd2f0e370, type: 2}
   - {fileID: 11400000, guid: f235a979b83c2c641986134dda69e29e, type: 2}
   - {fileID: 11400000, guid: 83cf9c5aa72453f41bac4e8e61ceb6ad, type: 2}
-  beachObjectsClone: []
 --- !u!1 &1587656614
 GameObject:
   m_ObjectHideFlags: 0
@@ -10763,8 +10761,6 @@ MonoBehaviour:
   fishingSceneName: 
   isFishCaught: 0
   allBeachFishesCollected: 0
-  allForestFishesCollected: 0
-  allCaveFishesCollected: 0
   allFishesCollected: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
